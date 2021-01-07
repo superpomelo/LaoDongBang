@@ -14,6 +14,7 @@
 #import "TheExamRushedOffViewController.h"
 #import "TheTestViewController.h"
 #import "MyTestViewController.h"
+#import "TestClassificationViewController.h"
 
 @interface ExaminationResultsViewController ()<UITableViewDelegate,UITableViewDataSource,FirstExaminationResultsTableViewCellDelegate,UIScrollViewDelegate>
 {
@@ -43,16 +44,22 @@
 
     if (@available(iOS 11.0, *)) {
 
-            self.myTableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        self.myTableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
 
     } else {
 
-            self.automaticallyAdjustsScrollViewInsets = NO;
+        self.automaticallyAdjustsScrollViewInsets = NO;
 
     }
     [self initUI];
     [self initmyTableView];
-    [self requestmobileEvaluationgetUserExamResult];
+    if (self.from == ExaminationResultsMeiRi) {
+        [self requestmobileEvaluationgetresult];
+
+    }else{
+        [self requestmobileEvaluationgetUserExamResult];
+
+    }
     self.fd_prefersNavigationBarHidden = YES;
     
 
@@ -103,19 +110,44 @@
         }else if (userScore>=100){
             [self initquxian:cell tianchongfloat:1];
         }else{
-            [self initquxian:cell tianchongfloat:[[NSString stringWithFormat:@"%.2f",userScore/100] floatValue]+0.01];
-        }
+            if (self.from == ExaminationResultsMeiRi) {
+                [self initquxian:cell tianchongfloat:[[NSString stringWithFormat:@"%.2f",userScore/100*20] floatValue]+0.01];
 
-      
+            }else{
+                [self initquxian:cell tianchongfloat:[[NSString stringWithFormat:@"%.2f",userScore/100] floatValue]+0.01];
+
+            }
+        }
+        if (self.from == ExaminationResultsMeiRi) {
+            [self animateToProgress:[[NSString stringWithFormat:@"%.2f",userScore/100*20] floatValue]];
+        }else{
             [self animateToProgress:[[NSString stringWithFormat:@"%.2f",userScore/100] floatValue]];
+        }
+      
+            
         
+        if (self.from == ExaminationResultsMeiRi) {
+            cell.textDetailButton.hidden = YES;
+            
+            if (self.Examinationmodel.userScore  > 2) {
+                [cell.againButton setTitle:@"考试合格" forState:UIControlStateNormal];
+            }else{
+                [cell.againButton setTitle:@"(不合格)再考一次" forState:UIControlStateNormal];
+            }
+        }
+        
+        if (self.from == ExaminationResultsMeiRi) {
+            NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%d",self.Examinationmodel.userScore*20] attributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize:48],NSForegroundColorAttributeName: [UIColor whiteColor]}];
+            cell.userScoreLabel.attributedText = attributedString;
+        }else{
+            NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%d",self.Examinationmodel.userScore] attributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize:48],NSForegroundColorAttributeName: [UIColor whiteColor]}];
+            cell.userScoreLabel.attributedText = attributedString;
+        }
+       
 
     }
     cell.delegate = self;
     return cell;
-  
-
-    
 
 }
 - (void)initUI{
@@ -148,17 +180,17 @@
     shape.path = circlePath.CGPath;//这里就是把背景的路径设为之前贝塞尔曲线的那个路径
     [cell.centerBottomView.layer addSublayer:shape];
     
-        _shapeLayer = [CAShapeLayer layer];
-        _shapeLayer.frame = cell.centerBottomView.bounds;
-        _shapeLayer.fillColor = [UIColor clearColor].CGColor;
-        _shapeLayer.lineWidth = 5.f;
-        _shapeLayer.lineCap = kCALineCapRound;
+    _shapeLayer = [CAShapeLayer layer];
+    _shapeLayer.frame = cell.centerBottomView.bounds;
+    _shapeLayer.fillColor = [UIColor clearColor].CGColor;
+    _shapeLayer.lineWidth = 5.f;
+    _shapeLayer.lineCap = kCALineCapRound;
     //    _shapeLayer.strokeColor = color.CGColor;
-        _shapeLayer.strokeColor = [UIColor whiteColor].CGColor;
-        _shapeLayer.strokeStart = 0.0;
-        _shapeLayer.strokeEnd = 0.0;
-        _shapeLayer.path = circlePath.CGPath;
-        [cell.centerBottomView.layer addSublayer:_shapeLayer];
+    _shapeLayer.strokeColor = [UIColor whiteColor].CGColor;
+    _shapeLayer.strokeStart = 0.0;
+    _shapeLayer.strokeEnd = 0.0;
+    _shapeLayer.path = circlePath.CGPath;
+    [cell.centerBottomView.layer addSublayer:_shapeLayer];
     
     [self qiudedonghua:cell tianchongfloat:tianchongfloat];
 }
@@ -301,9 +333,38 @@
         WrongTestDetailsViewController *WTvc = [[WrongTestDetailsViewController alloc]init];
         WTvc.model = self.model;
         [self.navigationController pushViewController:WTvc animated:YES];
-    }else if ([sender.currentTitle isEqualToString:@"再考一次"]){
-        NSLog(@"2");
-        [self requestmobileEvaluationagainExam];
+    }else if ([sender.currentTitle isEqualToString:@"再考一次"]||[sender.currentTitle isEqualToString:@"考试合格"]||[sender.currentTitle isEqualToString:@"(不合格)再考一次"]){
+        if (self.from == ExaminationResultsMeiRi) {
+            
+            if (self.Examinationmodel.userScore  > 2) {
+                //合格
+                for (UIViewController *temp in self.navigationController.viewControllers) {
+                    if (self.from == ExaminationResultsHome) {
+                        //返回考试冲关
+                        if ([temp isKindOfClass:[TheExamRushedOffViewController class]]) {
+                            [self.navigationController popToViewController:temp animated:YES];
+                        }
+                    }else if (self.from == ExaminationResultsPersonal) {
+                        //返回个人中心我的考试
+                        if ([temp isKindOfClass:[MyTestViewController class]]) {
+                            [self.navigationController popToViewController:temp animated:YES];
+                        }
+                    }else if (self.from == ExaminationResultsMeiRi) {
+                        if ([temp isKindOfClass:[TestClassificationViewController class]]) {
+                            [self.navigationController popToViewController:temp animated:YES];
+                        }
+                    }
+
+                  }
+            }else{
+                //不合格
+                [self requestmobileEvaluationagainExam];
+
+            }
+        }else{
+            [self requestmobileEvaluationagainExam];
+
+        }
     }
 }
 
@@ -318,6 +379,10 @@
        }else if (self.from == ExaminationResultsPersonal) {
            //返回个人中心我的考试
            if ([temp isKindOfClass:[MyTestViewController class]]) {
+               [self.navigationController popToViewController:temp animated:YES];
+           }
+       }else if (self.from == ExaminationResultsMeiRi) {
+           if ([temp isKindOfClass:[TestClassificationViewController class]]) {
                [self.navigationController popToViewController:temp animated:YES];
            }
        }
@@ -359,6 +424,19 @@
     }];
 }
 
+/**每日一练 获取考试结果*/
+- (void)requestmobileEvaluationgetresult{
+//    NSMutableDictionary *para = [NSMutableDictionary dictionary];
+//    //考试id
+//    para[@"examId"] = [NSString stringWithFormat:@"%d",self.model.idx];
+
+    [LaborCenterRequestDatas mobileEvaluationgetresultrequestDataWithparameters:nil success:^(id  _Nonnull result) {
+        self.Examinationmodel = result;
+        [self.myTableView reloadData];
+    } failure:^(NSError * _Nonnull error) {
+        
+    }];
+}
 /**重新考试*/
 - (void)requestmobileEvaluationagainExam{
     NSMutableDictionary *para = [NSMutableDictionary dictionary];

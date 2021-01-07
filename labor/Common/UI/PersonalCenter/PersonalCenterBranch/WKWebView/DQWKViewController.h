@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DQWKViewController : UIViewController
 @property(nonatomic,strong)NSString *urlstring;
-
+@property(nonatomic,strong)NSString *from;
+@property(nonatomic,strong)NSString *titleStr;
 @end
 
 NS_ASSUME_NONNULL_END

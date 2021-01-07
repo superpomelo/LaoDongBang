@@ -13,7 +13,8 @@ typedef enum  {
 
 ExaminationResultsHome  = 0, //考试冲关跳转进入
 ExaminationResultsPersonal,   //个人中心我的考试跳转进入
-    
+ExaminationResultsMeiRi,   //每日一练跳转进入
+
 } ExaminationResultsTypeState; //有哪里跳转进入的
 NS_ASSUME_NONNULL_BEGIN
 

@@ -83,7 +83,7 @@
 
 /**学校*/
 - (IBAction)xuexiaoButtonAction:(id)sender {
-            PerfectSchoolViewController *ICvc = [[PerfectSchoolViewController alloc]init];
+        PerfectSchoolViewController *ICvc = [[PerfectSchoolViewController alloc]init];
          ICvc.resultBlock = ^(SchoolNameModel * _Nonnull models) {
              self.deptId = [NSString stringWithFormat:@"%d",models.deptId];
              self.schoolLabel.text = models.name;
@@ -105,8 +105,9 @@
         self.yuanxiLabel.text = models.name;
     };
 
-            [self.navigationController pushViewController:TPvc animated:YES];
+    [self.navigationController pushViewController:TPvc animated:YES];
 }
+
 /**班级*/
 - (IBAction)banjiButtonAction:(id)sender {
     if ([self.deptId isEqualToString:@" "]) {
@@ -127,6 +128,7 @@
 
             [self.navigationController pushViewController:TPvc animated:YES];
 }
+
 /**确定*/
 - (IBAction)sureButtonAction:(UIButton*)sender {
     sender.userInteractionEnabled = NO;

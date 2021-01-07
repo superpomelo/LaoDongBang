@@ -25,6 +25,10 @@ NS_ASSUME_NONNULL_BEGIN
 /**详情页的简介*/
 @property (nonatomic, copy) NSString *body;
 @property (nonatomic, copy) NSString *faceUrl;
+@property (nonatomic, copy) NSString *cover;
+
+/**分类数组*/
+@property (nonatomic, copy) id lessonVos;
 
 @end
 

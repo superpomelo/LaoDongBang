@@ -25,10 +25,14 @@
 #import "LearningCenterDetails1NewsViewController.h"
 #import "FivethLaborCenterHomeTableViewCell.h"
 #import "GongGaoListViewController.h"
+#import "EightLaborCenterHomeNewsTableViewCell.h"
+#import "TestClassificationViewController.h"
+#import "DQWKViewController.h"
+
 
 //#import "UINavigationController+FDFullscreenPopGesture.h"
 
-@interface LaborCenterHomeViewController ()<UITableViewDelegate,UITableViewDataSource,SecondLaborCenterHomeTableViewCellDelegate,FourthLaborCenterHomeTableViewCellDelegate,JLCycleScrollerViewDelegate>
+@interface LaborCenterHomeViewController ()<UITableViewDelegate,UITableViewDataSource,SecondLaborCenterHomeTableViewCellDelegate,FourthLaborCenterHomeTableViewCellDelegate,JLCycleScrollerViewDelegate,EightLaborCenterHomeNewsTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (weak, nonatomic) IBOutlet UIView *searchBottomView;
 /**小红点底部view*/
@@ -43,10 +47,11 @@
 /**特别提醒数组*/
 @property (nonatomic,strong)NSArray *activityarray;
 /**公告数组*/
-@property (nonatomic,strong)NSArray *gongaoarray;
+//@property (nonatomic,strong)NSArray *gongaoarray;
 /**轮播数组*/
 @property (nonatomic,strong)NSArray *lunboarray;
-
+/**跑马灯*/
+@property (nonatomic,strong)NSArray *paomadengarray;
 
 @end
 
@@ -59,7 +64,9 @@
     self.array = [NSArray array];
     self.activityarray = [NSArray array];
     self.lunboarray = [NSArray array];
-    self.gongaoarray = [NSArray array];
+//    self.gongaoarray = [NSArray array];
+    self.paomadengarray = [NSArray array];
+
     [self initmyTableView];
     [self initUI];
     [self requestmobileIndexcarouselIndex];
@@ -102,6 +109,7 @@
     [self.myTableView registerNib:[UINib nibWithNibName:@"FourthLaborCenterHomeTableViewCell" bundle:nil] forCellReuseIdentifier:@"FourthLaborCenterHomeTableViewCellID"];
     
     [self.myTableView registerNib:[UINib nibWithNibName:@"FivethLaborCenterHomeTableViewCell" bundle:nil] forCellReuseIdentifier:@"FivethLaborCenterHomeTableViewCellID"];
+    [self.myTableView registerNib:[UINib nibWithNibName:@"EightLaborCenterHomeNewsTableViewCell" bundle:nil] forCellReuseIdentifier:@"EightLaborCenterHomeNewsTableViewCellID"];
     
     self.myTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self requestmobileIndexcarouselIndex];
@@ -118,18 +126,18 @@
             return 160;
             break;
         case 1:
-            return 110;
-            break;
-        case 3:
-            //政策公告
-            if (self.gongaoarray.count>0) {
-                return 115;
-
-            }else{
-                return 0.0000001;
-            }
+            return 40;
             break;
         case 2:
+            //政策公告
+//            if (self.gongaoarray.count>0) {
+                return 110;
+
+//            }else{
+//                return 0.0000001;
+//            }
+            break;
+        case 3:
             if (self.activityarray.count>0) {
                 return 115;
 
@@ -165,15 +173,16 @@
         case 1:
             return 1;
             break;
-        case 3:
-            if (self.gongaoarray.count>2) {
-                return 2;
-            }else{
-                return self.gongaoarray.count;
-
-            }
-            break;
         case 2:
+            return 1;
+//            if (self.gongaoarray.count>2) {
+//                return 2;
+//            }else{
+//                return self.gongaoarray.count;
+//
+//            }
+            break;
+        case 3:
             return self.activityarray.count;
             break;
         case 4:
@@ -186,14 +195,8 @@
     return 0;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if (section == 2) {
+    if (section == 3) {
         if (self.activityarray.count>0) {
-            return 35;
-        }else{
-            return 0.00000000001;
-        }
-    }else  if (section == 3) {
-        if (self.gongaoarray.count>0) {
             return 35;
         }else{
             return 0.00000000001;
@@ -205,21 +208,21 @@
     }
 }
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    if (section == 2) {
+    if (section == 3) {
         if (self.activityarray.count>0) {
             UIView *vi = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCR_W, 35)];
             vi.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1];
 
             [tableView addSubview:vi];
             UIView *vibg = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCR_W, 10)];
-            vibg.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1];
-
+//            vibg.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1];
+            vibg.backgroundColor = [UIColor whiteColor];
             [vi addSubview:vibg];
 
 
             
             UILabel *lbR = [[UILabel alloc]initWithFrame:CGRectMake(15, 20, 4, 15)];
-            lbR.backgroundColor = [UIColor colorWithRed:236/255.0 green:147/255.0 blue:41/255.0 alpha:1.0];
+            lbR.backgroundColor = [UIColor colorWithRed:80/255.0 green:219/255.0 blue:142/255.0 alpha:1.0];
             [vi addSubview:lbR];
 
             UILabel *lb = [[UILabel alloc]initWithFrame:CGRectMake(25, 10, SCR_W, 35)];
@@ -233,49 +236,49 @@
             return vi;
         }
 
-    }else if (section == 3) {
+    }else if (section == 41) {
         
-        if (self.gongaoarray.count>0) {
-            UIView *vi = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCR_W, 35)];
-            vi.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1];
-
-            [tableView addSubview:vi];
-            UIView *vibg = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCR_W, 10)];
-            vibg.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1];
-
-            [vi addSubview:vibg];
-
-
-            
-            UILabel *lbR = [[UILabel alloc]initWithFrame:CGRectMake(15, 20, 4, 15)];
-            lbR.backgroundColor = [UIColor colorWithRed:236/255.0 green:147/255.0 blue:41/255.0 alpha:1.0];
-            [vi addSubview:lbR];
-
-            UILabel *lb = [[UILabel alloc]initWithFrame:CGRectMake(25, 10, SCR_W, 35)];
-    //        lb.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1];
-            NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@"政策公告" attributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize:16],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
-            lb.attributedText = attributedString;
-            [vi addSubview:lb];
-            
-            UILabel *lab = [[UILabel alloc]initWithFrame:CGRectMake(SCR_W-60, 10, 30, 35)];
-            lab.text = @"更多";
-            lab.textColor = [UIColor colorWithRed:102/255.0 green:102/255.0 blue:102/255.0 alpha:1.0];
-            lab.font = [UIFont systemFontOfSize:14];
-            [vi addSubview:lab];
-            
-            UIImageView *img = [[UIImageView alloc]initWithFrame:CGRectMake(SCR_W-30, 22.5, 10, 10)];
-            img.image = [UIImage imageNamed:@"ic_go3"];
-            [vi addSubview:img];
-            
-            UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(SCR_W-60, 5, 45, 40)];
-            [btn addTarget:self action:@selector(gonggaoActionMore:) forControlEvents:UIControlEventTouchUpInside];
-            [vi addSubview:btn];
-            return vi;
-        }else{
+//        if (self.gongaoarray.count>0) {
+//            UIView *vi = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCR_W, 35)];
+//            vi.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1];
+//
+//            [tableView addSubview:vi];
+//            UIView *vibg = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCR_W, 10)];
+//            vibg.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1];
+//
+//            [vi addSubview:vibg];
+//
+//
+//
+//            UILabel *lbR = [[UILabel alloc]initWithFrame:CGRectMake(15, 20, 4, 15)];
+//            lbR.backgroundColor = [UIColor colorWithRed:236/255.0 green:147/255.0 blue:41/255.0 alpha:1.0];
+//            [vi addSubview:lbR];
+//
+//            UILabel *lb = [[UILabel alloc]initWithFrame:CGRectMake(25, 10, SCR_W, 35)];
+//    //        lb.backgroundColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:1];
+//            NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@"政策公告" attributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize:16],NSForegroundColorAttributeName: [UIColor colorWithRed:51/255.0 green:51/255.0 blue:51/255.0 alpha:1.0]}];
+//            lb.attributedText = attributedString;
+//            [vi addSubview:lb];
+//
+//            UILabel *lab = [[UILabel alloc]initWithFrame:CGRectMake(SCR_W-60, 10, 30, 35)];
+//            lab.text = @"更多";
+//            lab.textColor = [UIColor colorWithRed:102/255.0 green:102/255.0 blue:102/255.0 alpha:1.0];
+//            lab.font = [UIFont systemFontOfSize:14];
+//            [vi addSubview:lab];
+//
+//            UIImageView *img = [[UIImageView alloc]initWithFrame:CGRectMake(SCR_W-30, 22.5, 10, 10)];
+//            img.image = [UIImage imageNamed:@"ic_go3"];
+//            [vi addSubview:img];
+//
+//            UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(SCR_W-60, 5, 45, 40)];
+//            [btn addTarget:self action:@selector(gonggaoActionMore:) forControlEvents:UIControlEventTouchUpInside];
+//            [vi addSubview:btn];
+//            return vi;
+//        }else{
             UIView *vi = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 0, 0.00000000001)];
             vi.backgroundColor = [UIColor redColor];
             return vi;
-        }
+//        }
     
         
 
@@ -285,14 +288,16 @@
 
         [tableView addSubview:vi];
         UIView *vibg = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCR_W, 10)];
-        vibg.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1];
-
+//        vibg.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:239/255.0 alpha:1];
+        vibg.backgroundColor = [UIColor whiteColor];
         [vi addSubview:vibg];
 
 
         
         UILabel *lbR = [[UILabel alloc]initWithFrame:CGRectMake(15, 20, 4, 15)];
-        lbR.backgroundColor = [UIColor colorWithRed:236/255.0 green:147/255.0 blue:41/255.0 alpha:1.0];
+//        lbR.backgroundColor = [UIColor colorWithRed:236/255.0 green:147/255.0 blue:41/255.0 alpha:1.0];
+        
+        lbR.backgroundColor = [UIColor colorWithRed:80/255.0 green:219/255.0 blue:142/255.0 alpha:1.0];
         [vi addSubview:lbR];
 
         UILabel *lb = [[UILabel alloc]initWithFrame:CGRectMake(25, 10, SCR_W, 35)];
@@ -345,27 +350,52 @@
         }
         return cell;
     }else if (indexPath.section == 1){
+        EightLaborCenterHomeNewsTableViewCell *cell = [self.myTableView dequeueReusableCellWithIdentifier:@"EightLaborCenterHomeNewsTableViewCellID"];
+        cell.delegate = self;
+        if (self.paomadengarray.count>0) {
+//            NSMutableArray *aryM = [NSMutableArray array];
+            NSMutableArray *titlearyM = [NSMutableArray array];
+            for (int i=0; i<self.paomadengarray.count; i++) {
+//                if (i<3) {
+                    LearningCenterHomeModel *model = self.paomadengarray[i];
+//                    [aryM addObject:model.thumbnail];
+                    [titlearyM addObject:model.title];
+//                }
+
+            }
+            [cell reloadData:titlearyM];
+
+         
+        }
+        return cell;
+        
+       
+    }else if (indexPath.section == 2){
         SecondLaborCenterHomeTableViewCell *cell = [self.myTableView dequeueReusableCellWithIdentifier:@"SecondLaborCenterHomeTableViewCellID"];
         cell.delegate = self;
         return cell;
-    }else if (indexPath.section == 3){
-        FivethLaborCenterHomeTableViewCell *cell = [self.myTableView dequeueReusableCellWithIdentifier:@"FivethLaborCenterHomeTableViewCellID"];
-//        cell.delegate = self;
-        if (self.gongaoarray.count>1) {
-            if (indexPath.row==0) {
-                cell.lineLabel.hidden = NO;
-            }else{
-                cell.lineLabel.hidden = YES;
-            }
-        }
 
-        [cell reloadData:self.gongaoarray[indexPath.row]];
-        return cell;
-    }else if (indexPath.section == 2){
-       ThirdLaborCenterHomeTableViewCell *cell = [self.myTableView dequeueReusableCellWithIdentifier:@"ThirdLaborCenterHomeTableViewCellID"];
-       
+
+
+    }else if (indexPath.section == 3){
+        ThirdLaborCenterHomeTableViewCell *cell = [self.myTableView dequeueReusableCellWithIdentifier:@"ThirdLaborCenterHomeTableViewCellID"];
+        
         [cell reloadData:self.activityarray[indexPath.row]];
         return cell;
+//        FivethLaborCenterHomeTableViewCell *cell = [self.myTableView dequeueReusableCellWithIdentifier:@"FivethLaborCenterHomeTableViewCellID"];
+////        cell.delegate = self;
+//        if (self.gongaoarray.count>1) {
+//            if (indexPath.row==0) {
+//                cell.lineLabel.hidden = NO;
+//            }else{
+//                cell.lineLabel.hidden = YES;
+//            }
+//        }
+//
+//        [cell reloadData:self.gongaoarray[indexPath.row]];
+//        return cell;
+        
+      
     }else{
        FourthLaborCenterHomeTableViewCell *cell = [self.myTableView dequeueReusableCellWithIdentifier:@"FourthLaborCenterHomeTableViewCellID"];
         cell.delegate = self;
@@ -378,20 +408,43 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.section == 2) {
+    if (indexPath.section == 3) {
         //特别提醒
         TaskAssessmentDetailsViewController *TAvc = [[TaskAssessmentDetailsViewController alloc]init];
         TAvc.model = self.activityarray[indexPath.row];
         [TAvc setHidesBottomBarWhenPushed:YES];
         [self.navigationController pushViewController:TAvc animated:YES];
     }
-    if (indexPath.section == 3) {
-        LearningCenterDetails1NewsViewController *LCvc1 = [[LearningCenterDetails1NewsViewController alloc]init];
-        LearningCenterHomeModel *model = self.gongaoarray[indexPath.row];
-        LCvc1.informationId = model.idx;
-        [LCvc1 setHidesBottomBarWhenPushed:YES];
+//    if (indexPath.section == 3) {
+//        LearningCenterDetails1NewsViewController *LCvc1 = [[LearningCenterDetails1NewsViewController alloc]init];
+//        LearningCenterHomeModel *model = self.gongaoarray[indexPath.row];
+//        LCvc1.informationId = model.idx;
+//        [LCvc1 setHidesBottomBarWhenPushed:YES];
+//
+//        [self.navigationController pushViewController:LCvc1 animated:YES];
+//    }
+}
 
-        [self.navigationController pushViewController:LCvc1 animated:YES];
+
+/**跑马灯delegate*/
+- (void)EightLaborCenterHomeNewsTableViewCellActiondelegate:(EightLaborCenterHomeNewsTableViewCell*)cell index:(NSInteger)index{
+    if (self.paomadengarray.count>0) {
+//        LearningCenterDetails1NewsViewController *LCvc1 = [[LearningCenterDetails1NewsViewController alloc]init];
+//        LearningCenterHomeModel *model = self.paomadengarray[index];
+//            LCvc1.informationId = model.idx;
+//            [LCvc1 setHidesBottomBarWhenPushed:YES];
+//
+//            [self.navigationController pushViewController:LCvc1 animated:YES];
+        LearningCenterHomeModel *model = self.paomadengarray[index];
+//
+//        [self requestinformationinformationpageforzc:[NSString stringWithFormat:@"%d",model.idx]];
+        
+        DQWKViewController *PIvc = [[DQWKViewController alloc]initWithNibName:@"DQWKViewController" bundle:nil];
+        [PIvc setHidesBottomBarWhenPushed:YES];
+        PIvc.titleStr = @"政策详情";
+        PIvc.urlstring = model.sourceUrl;
+        [self.navigationController pushViewController:PIvc animated:NO];
+       
     }
 }
 
@@ -433,16 +486,16 @@
     AssessmentOfTheTaskViewController *AOvc = [[AssessmentOfTheTaskViewController alloc]init];
     TheExamRushedOffViewController *TEvc = [[TheExamRushedOffViewController alloc]init];
     VRSeeCampusViewController *VRvc = [[VRSeeCampusViewController alloc]init];
-    
+    TestClassificationViewController *TCVc = [[TestClassificationViewController alloc]init];
     switch (state) {
         case LaborCenterStateTeacherLectureHall://名师讲堂
             [TLvc setHidesBottomBarWhenPushed:YES];
             [self.navigationController pushViewController:TLvc animated:YES];
             break;
         case LaborCenterStateTheTest://考试冲关
-            [TEvc setHidesBottomBarWhenPushed:YES];
-            [self.navigationController pushViewController:TEvc animated:YES];
-
+            [TCVc setHidesBottomBarWhenPushed:YES];
+            [self.navigationController pushViewController:TCVc animated:YES];
+            
             break;
         case LaborCenterStateTheExamRushedOff://任务考核
             [AOvc setHidesBottomBarWhenPushed:YES];
@@ -559,15 +612,34 @@
 - (void)requestinformationmobileIndexinformationone{
     NSMutableDictionary *para = [NSMutableDictionary dictionary];
 
-    para[@"type"] = @"13";
+//    para[@"type"] = @"13";
+    para[@"classificationId"] = @"13";
+
+    
     [LaborCenterRequestDatas informationmobileIndexinformationonerequestDataWithparameters:para success:^(id  _Nonnull result) {
-        self.gongaoarray = result;
+        self.paomadengarray = result;
         [self.myTableView reloadData];
     } failure:^(NSError * _Nonnull error) {
         
     }];
 }
 
+/**通过id获取官网地址*/
+- (void)requestinformationinformationpageforzc:(NSString*)classificationId{
+    NSMutableDictionary *para = [NSMutableDictionary dictionary];
+
+    para[@"classificationId"] = classificationId;
+    [LaborCenterRequestDatas informationinformationpageforzcrequestDataWithparameters:para success:^(id  _Nonnull result) {
+//        self.paomadengarray = result;
+//        [self.myTableView reloadData];
+        DQWKViewController *PIvc = [[DQWKViewController alloc]initWithNibName:@"DQWKViewController" bundle:nil];
+
+        PIvc.urlstring = @"";
+        [self.navigationController pushViewController:PIvc animated:NO];
+    } failure:^(NSError * _Nonnull error) {
+        
+    }];
+}
 /*
 #pragma mark - Navigation
 

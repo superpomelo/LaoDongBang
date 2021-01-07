@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -37,14 +37,14 @@
                                     <constraint firstAttribute="bottom" secondItem="5oR-Su-wTX" secondAttribute="bottom" id="wqu-qJ-hQD"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="校外拓展" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qa3-gR-jjQ">
-                                <rect key="frame" x="107" y="10" width="65.5" height="19.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="校外拓展" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qa3-gR-jjQ">
+                                <rect key="frame" x="107" y="10" width="132" height="19.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.20392156862745098" green="0.20392156862745098" blue="0.20392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文本" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eq7-Mi-Fr7">
-                                <rect key="frame" x="107" y="39.5" width="29" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="文本" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eq7-Mi-Fr7">
+                                <rect key="frame" x="107" y="39.5" width="171" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -82,12 +82,14 @@
                         <constraints>
                             <constraint firstItem="Qa3-gR-jjQ" firstAttribute="leading" secondItem="Bop-76-0vy" secondAttribute="trailing" constant="15" id="1Wn-HX-4Ji"/>
                             <constraint firstItem="Bop-76-0vy" firstAttribute="top" secondItem="D89-Oa-phs" secondAttribute="top" constant="10" id="9hZ-8V-en8"/>
+                            <constraint firstAttribute="trailing" secondItem="eq7-Mi-Fr7" secondAttribute="trailing" constant="15" id="CRy-8J-IpO"/>
                             <constraint firstItem="Bop-76-0vy" firstAttribute="centerY" secondItem="D89-Oa-phs" secondAttribute="centerY" id="IAh-Y5-OBI"/>
                             <constraint firstAttribute="trailing" secondItem="6TP-Ut-frd" secondAttribute="trailing" id="NBG-jp-p18"/>
                             <constraint firstItem="6TP-Ut-frd" firstAttribute="top" secondItem="D89-Oa-phs" secondAttribute="top" id="PaA-NN-Ncv"/>
                             <constraint firstItem="eq7-Mi-Fr7" firstAttribute="top" secondItem="Qa3-gR-jjQ" secondAttribute="bottom" constant="10" id="Q1y-aw-2Xd"/>
                             <constraint firstItem="Bop-76-0vy" firstAttribute="leading" secondItem="D89-Oa-phs" secondAttribute="leading" constant="10" id="UEl-jl-rad"/>
                             <constraint firstItem="eq7-Mi-Fr7" firstAttribute="leading" secondItem="Qa3-gR-jjQ" secondAttribute="leading" id="iu4-pN-sfN"/>
+                            <constraint firstItem="6TP-Ut-frd" firstAttribute="leading" secondItem="Qa3-gR-jjQ" secondAttribute="trailing" constant="1" id="nR2-lK-oXX"/>
                             <constraint firstItem="Qa3-gR-jjQ" firstAttribute="top" secondItem="Bop-76-0vy" secondAttribute="top" id="nej-mB-FxQ"/>
                             <constraint firstAttribute="bottom" secondItem="Bop-76-0vy" secondAttribute="bottom" constant="10" id="u1k-A8-EEX"/>
                         </constraints>

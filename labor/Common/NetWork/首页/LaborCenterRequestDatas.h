@@ -14,6 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 /**名师讲堂-<课时列表接口>*/
 + (void)TeacherLectureHallrequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure;
 
+/**名师讲堂分类-<课时列表>*/
++ (void)getPagesrequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure;
+
+/**老师详情*/
++ (void)learncoursegetbyidrequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure;
 
 /**播放视频-<开始计时>*/
 + (void)learnmobileLearnplayVideorequestDataWithparameters:(id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure;
@@ -41,6 +46,15 @@ NS_ASSUME_NONNULL_BEGIN
 /**在线考试*/
 + (void)mobileEvaluationgetExamDetailsrequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure;
 
+/**每日一练 在线考试*/
++ (void)mobileEvaluationeverydaydorequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure;
+
+/**每日一练 提交试卷*/
++ (void)mobileEvaluationsubmiteveryExamrequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure;
+
+/**每日一练 获取考试结果*/
++ (void)mobileEvaluationgetresultrequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure;
+
 /**提交试卷*/
 + (void)mobileEvaluationsubmitExamrequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure;
 
@@ -52,6 +66,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**判断已考试*/
 + (void)mobileEvaluationcheckexamrequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure;
+
+/**判断已考试(每日一练)*/
++ (void)mobileEvaluationcheckeverydayexamrequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure;
 
 /**在线考试答题详情*/
 + (void)mobileEvaluationgetmyexaminforequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure;
@@ -97,6 +114,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**公示公告*/
 + (void)informationmobileIndexinformationonerequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure;
+
+/**公告地址*/
++ (void)informationinformationpageforzcrequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure;
 @end
 
 NS_ASSUME_NONNULL_END

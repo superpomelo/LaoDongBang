@@ -11,7 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PublishTaskViewController : UIViewController
-
+/**任务名称*/
+@property (nonatomic,strong)NSString *titlestr;
+/**活动描述*/
+@property (nonatomic,strong)NSString *content;
 @end
 
 NS_ASSUME_NONNULL_END

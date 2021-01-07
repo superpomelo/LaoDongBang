@@ -9,7 +9,7 @@
 #ifndef Macro_h
 #define Macro_h
 //本地
-//static NSString * const Host = @"http://192.168.0.13:9999/";
+//static NSString * const Host = @"http://192.168.0.9:9999/";
 
 //正式
 static NSString * const Host = @"http://111.74.0.243:9999/";

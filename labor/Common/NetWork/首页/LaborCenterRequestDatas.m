@@ -21,19 +21,23 @@
 #import "LearningCenterHomeModel.h"
 #import "TeacherLectureHallModel.h"
 #import "TheMessageCenterModel.h"
+#import "TeacherLectureHallListSModel.h"
+#import "TeacherIntroducedDteailsModel.h"
 
 @implementation LaborCenterRequestDatas
 /**名师讲堂-<课时列表>*/
 + (void)TeacherLectureHallrequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure{
     //    NSString *path = [NSString stringWithFormat:@"%@/auth/oauth/token",Host];
-        NSString *path = [NSString stringWithFormat:@"%@learn/mobileLearn/getCourseLessonList",Host];
+//        NSString *path = [NSString stringWithFormat:@"%@learn/mobileLearn/getCourseLessonList",Host];
+    NSString *path = [NSString stringWithFormat:@"%@learn/lesson/pagefortea",Host];
+    
     //    NSString *JsonStr = [JsonString convertToJsonData:parameters];
         [BaseRequestDatas requestDataWithPath:path parameters:parameters HTTPMethod:HTTPMethodGET HeaderType:HeaderTypeTOKEN isShowLoading:NO success:^(id  _Nonnull result) {
             NSDictionary *dict = [NSDictionary dictionary];
             dict = result;
 //            NSLog(@"%@",result);
             if ([dict.allKeys containsObject:@"data"]) {
-                NSArray *array =  [TeacherLectureHallModel mj_objectArrayWithKeyValuesArray:dict[@"data"]]; //数组
+                NSArray *array =  [TeacherLectureHallListSModel mj_objectArrayWithKeyValuesArray:dict[@"data"][@"records"]]; //数组
                 success(array);
 
             }else{
@@ -44,6 +48,30 @@
 //           [SVProgressHUD showInfoWithStatus:@"failure"];
             failure(error);
             NSLog(@"名师讲堂-<课时列表>%@ ---%@",parameters,path);
+        }];
+}
+
+/**名师讲堂分类-<课时列表>*/
++ (void)getPagesrequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure{
+    //    NSString *path = [NSString stringWithFormat:@"%@/auth/oauth/token",Host];
+        NSString *path = [NSString stringWithFormat:@"%@learn/mobileLearn/getPages",Host];
+    //    NSString *JsonStr = [JsonString convertToJsonData:parameters];
+        [BaseRequestDatas requestDataWithPath:path parameters:parameters HTTPMethod:HTTPMethodGET HeaderType:HeaderTypeTOKEN isShowLoading:NO success:^(id  _Nonnull result) {
+            NSDictionary *dict = [NSDictionary dictionary];
+            dict = result;
+            NSLog(@"%@",result);
+            if ([dict.allKeys containsObject:@"data"]) {
+                NSArray *array =  [TeacherLectureHallModel mj_objectArrayWithKeyValuesArray:dict[@"data"][@"records"]]; //数组
+                success(array);
+
+            }else{
+                NSLog(@"4");
+
+            }
+        } failure:^(NSError * _Nonnull error) {
+//           [SVProgressHUD showInfoWithStatus:@"failure"];
+            failure(error);
+            NSLog(@"名师讲堂分类-<课时列表>%@ ---%@",parameters,path);
         }];
 }
 /**播放视频-<开始计时>*/
@@ -256,6 +284,29 @@
         }];
 }
 
+/**每日一练 在线考试*/
++ (void)mobileEvaluationeverydaydorequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure{
+        NSString *path = [NSString stringWithFormat:@"%@evaluation/mobileEvaluation/everydaydo",Host];
+    //    NSString *JsonStr = [JsonString convertToJsonData:parameters];
+        [BaseRequestDatas requestDataWithPath:path parameters:parameters HTTPMethod:HTTPMethodGET HeaderType:HeaderTypeTOKEN isShowLoading:NO success:^(id  _Nonnull result) {
+            NSDictionary *dict = [NSDictionary dictionary];
+            dict = result;
+            if ([dict.allKeys containsObject:@"data"]) {
+
+                success(result);
+
+            }else{
+                NSLog(@"4");
+
+            }
+        } failure:^(NSError * _Nonnull error) {
+//           [SVProgressHUD showInfoWithStatus:@"failure"];
+            failure(error);
+            NSLog(@"在线考试 %@ ---%@",parameters,path);
+
+        }];
+}
+
 /**提交试卷*/
 + (void)mobileEvaluationsubmitExamrequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure{
        NSString *path = [NSString stringWithFormat:@"%@evaluation/mobileEvaluation/submitExamios",Host];
@@ -281,9 +332,89 @@
         }];
 }
 
+/**每日一练 提交试卷*/
++ (void)mobileEvaluationsubmiteveryExamrequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure{
+       NSString *path = [NSString stringWithFormat:@"%@evaluation/mobileEvaluation/submiteveryExam",Host];
+        NSString *JsonStr = [JsonString convertToJsonData:parameters];
+        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+        dict[@"string"] = JsonStr;
+        [BaseRequestDatas requestDataWithPath:path parameters:dict HTTPMethod:HTTPMethodPOST HeaderType:HeaderTypeContentTypeTOKEN isShowLoading:NO success:^(id  _Nonnull result) {
+            NSDictionary *dict = [NSDictionary dictionary];
+            dict = result;
+            if ([dict.allKeys containsObject:@"data"]) {
+//                NSArray *array =  [TheTestModel mj_objectArrayWithKeyValuesArray:dict[@"data"][@"questionVoList"]]; //数组
+                success(@"200");
+
+            }else{
+                NSLog(@"4");
+
+            }
+        } failure:^(NSError * _Nonnull error) {
+//           [SVProgressHUD showInfoWithStatus:@"failure"];
+            failure(error);
+            NSLog(@"提交试卷 %@ ---%@",parameters,path);
+
+        }];
+}
 /**获取考试结果*/
 + (void)mobileEvaluationgetUserExamResultrequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure{
            NSString *path = [NSString stringWithFormat:@"%@evaluation/mobileEvaluation/getUserExamResult",Host];
+        //    NSString *JsonStr = [JsonString convertToJsonData:parameters];
+//          NSString *JsonStr = [JsonString convertToJsonData:parameters];
+//          NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+//           dict[@"string"] = JsonStr;
+            [BaseRequestDatas requestDataWithPath:path parameters:parameters HTTPMethod:HTTPMethodGET HeaderType:HeaderTypeContentTypeTOKEN isShowLoading:NO success:^(id  _Nonnull result) {
+                NSDictionary *dict = [NSDictionary dictionary];
+                dict = result;
+                if ([dict.allKeys containsObject:@"data"]) {
+                    NSLog(@"200");
+                ExaminationResultsModel *model = [ExaminationResultsModel mj_objectWithKeyValues:dict[@"data"]];
+    //                NSArray *array =  [TheTestModel mj_objectArrayWithKeyValuesArray:dict[@"data"][@"questionVoList"]]; //数组
+                    success(model);
+
+                }else{
+                    NSLog(@"4");
+
+                }
+            } failure:^(NSError * _Nonnull error) {
+//               [SVProgressHUD showInfoWithStatus:@"failure"];
+                failure(error);
+                NSLog(@"获取考试结果 %@ ---%@",parameters,path);
+
+            }];
+}
+
+/**老师详情*/
++ (void)learncoursegetbyidrequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure{
+           NSString *path = [NSString stringWithFormat:@"%@learn/course/getbyid",Host];
+        //    NSString *JsonStr = [JsonString convertToJsonData:parameters];
+//          NSString *JsonStr = [JsonString convertToJsonData:parameters];
+//          NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+//           dict[@"string"] = JsonStr;
+            [BaseRequestDatas requestDataWithPath:path parameters:parameters HTTPMethod:HTTPMethodGET HeaderType:HeaderTypeContentTypeTOKEN isShowLoading:NO success:^(id  _Nonnull result) {
+                NSDictionary *dict = [NSDictionary dictionary];
+                dict = result;
+                NSLog(@"%@",result);
+                if ([dict.allKeys containsObject:@"data"]) {
+                    NSLog(@"200");
+                    TeacherIntroducedDteailsModel *model = [TeacherIntroducedDteailsModel mj_objectWithKeyValues:dict[@"data"]];
+    //                NSArray *array =  [TheTestModel mj_objectArrayWithKeyValuesArray:dict[@"data"][@"questionVoList"]]; //数组
+                    success(model);
+
+                }else{
+                    NSLog(@"4");
+
+                }
+            } failure:^(NSError * _Nonnull error) {
+//               [SVProgressHUD showInfoWithStatus:@"failure"];
+                failure(error);
+                NSLog(@"老师详情 %@ ---%@",parameters,path);
+
+            }];
+}
+/**每日一练 获取考试结果*/
++ (void)mobileEvaluationgetresultrequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure{
+           NSString *path = [NSString stringWithFormat:@"%@evaluation/mobileEvaluation/getresult",Host];
         //    NSString *JsonStr = [JsonString convertToJsonData:parameters];
 //          NSString *JsonStr = [JsonString convertToJsonData:parameters];
 //          NSMutableDictionary *dict = [NSMutableDictionary dictionary];
@@ -355,7 +486,29 @@
 
             }];
 }
+/**判断已考试(每日一练)*/
++ (void)mobileEvaluationcheckeverydayexamrequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure{
+           NSString *path = [NSString stringWithFormat:@"%@evaluation/mobileEvaluation/checkeverydayexam",Host];
+        //    NSString *JsonStr = [JsonString convertToJsonData:parameters];
+            [BaseRequestDatas requestDataWithPath:path parameters:parameters HTTPMethod:HTTPMethodGET HeaderType:HeaderTypeContentTypeTOKEN isShowLoading:NO success:^(id  _Nonnull result) {
+                NSDictionary *dict = [NSDictionary dictionary];
+                dict = result;
+                if ([dict.allKeys containsObject:@"data"]) {
+                    NSLog(@"200");
+    //                NSArray *array =  [TheTestModel mj_objectArrayWithKeyValuesArray:dict[@"data"][@"questionVoList"]]; //数组
+                    success(dict);
 
+                }else{
+                    NSLog(@"4");
+
+                }
+            } failure:^(NSError * _Nonnull error) {
+//               [SVProgressHUD showInfoWithStatus:@"failure"];
+                failure(error);
+                NSLog(@"判断已考试 %@ ---%@",parameters,path);
+
+            }];
+}
 /**在线考试答题详情*/
 + (void)mobileEvaluationgetmyexaminforequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure{
            NSString *path = [NSString stringWithFormat:@"%@evaluation/mobileEvaluation/getmyexaminfo",Host];
@@ -671,7 +824,33 @@
 
 /**公示公告*/
 + (void)informationmobileIndexinformationonerequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure{
-    NSString *path = [NSString stringWithFormat:@"%@information/mobileIndex/informationone",Host];
+//    NSString *path = [NSString stringWithFormat:@"%@information/mobileIndex/informationone",Host];
+    NSString *path = [NSString stringWithFormat:@"%@information/information/pageforzc",Host];
+
+ //    NSString *JsonStr = [JsonString convertToJsonData:parameters];
+     [BaseRequestDatas requestDataWithPath:path parameters:parameters HTTPMethod:HTTPMethodGET HeaderType:HeaderTypeContentTypeTOKEN isShowLoading:NO success:^(id  _Nonnull result) {
+            NSLog(@"%@",result);
+         NSDictionary *dict = [NSDictionary dictionary];
+         dict = result;
+         if ([dict.allKeys containsObject:@"data"]) {
+//                NSLog(@"200");
+             NSArray *array =  [LearningCenterHomeModel mj_objectArrayWithKeyValuesArray:dict[@"data"][@"records"]]; //数组
+             success(array);
+
+         }else{
+             NSLog(@"4");
+
+         }
+     } failure:^(NSError * _Nonnull error) {
+//           [SVProgressHUD showInfoWithStatus:@"failure"];
+         failure(error);
+         NSLog(@"公示公告 %@ ---%@",parameters,path);
+     }];
+}
+
+/**公告地址*/
++ (void)informationinformationpageforzcrequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure{
+    NSString *path = [NSString stringWithFormat:@"%@information/information/pageforzc",Host];
  //    NSString *JsonStr = [JsonString convertToJsonData:parameters];
      [BaseRequestDatas requestDataWithPath:path parameters:parameters HTTPMethod:HTTPMethodGET HeaderType:HeaderTypeContentTypeTOKEN isShowLoading:NO success:^(id  _Nonnull result) {
             NSLog(@"%@",result);

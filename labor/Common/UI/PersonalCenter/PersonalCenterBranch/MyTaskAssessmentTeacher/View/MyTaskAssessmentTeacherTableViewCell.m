@@ -20,6 +20,8 @@
     self.bottomView.layer.borderWidth = 0.5;
     self.bottomView.layer.borderColor = [UIColor colorWithRed:230/255.0 green:230/255.0 blue:230/255.0 alpha:1.0].CGColor;
     self.bottomView.layer.cornerRadius = 4;
+    self.coverImageView.layer.cornerRadius = 2;
+    self.coverImageView.layer.masksToBounds = YES;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

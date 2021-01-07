@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TeacherLectureHallModel.h"
+//#import "TeacherLectureHallModel.h"
+#import "TeacherLectureHallListModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *playNumLabel;
-- (void)reloadData:(TeacherLectureHallModel*)model;
+- (void)reloadData:(TeacherLectureHallListModel*)model;
 @property (weak, nonatomic) IBOutlet UIImageView *playImageView;
 
 @end

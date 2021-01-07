@@ -59,7 +59,13 @@
     self.optionsContentArray = [NSArray array];
     [self initUI];
     [self initmyTableView];
-    [self requestmobileEvaluationgetExamDetails];
+    if (self.from == ExaminationResultsMeiRi) {
+        [self requestmobileEvaluationeverydaydo];
+
+    }else{
+        [self requestmobileEvaluationgetExamDetails];
+
+    }
     self.fd_prefersNavigationBarHidden = YES;
 
 }
@@ -435,7 +441,13 @@
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 sender.userInteractionEnabled = YES;
             });
-            [self requestmobileEvaluationsubmitExam];
+            if (self.from == ExaminationResultsMeiRi) {
+                [self requestmobileEvaluationeveryExam];
+
+            }else{
+                [self requestmobileEvaluationsubmitExam];
+
+            }
             
 
         }else{
@@ -484,7 +496,27 @@
         
     }];
 }
-
+/**每日一练 在线考试*/
+- (void)requestmobileEvaluationeverydaydo{
+//    NSMutableDictionary *para = [NSMutableDictionary dictionary];
+//    //考试id
+//    para[@"examId"] = [NSString stringWithFormat:@"%d",self.model.idx];
+//    //试卷id
+//    para[@"examPaperId"] = [NSString stringWithFormat:@"%d",self.model.examPaperId];
+//    para[@"startTime"] = [MyTimeInterval IntervalStringToDateString:[MyTimeInterval getNowDateSJC]];
+//    self.startTime = [MyTimeInterval getNowDateSJC];
+    [LaborCenterRequestDatas mobileEvaluationeverydaydorequestDataWithparameters:nil success:^(id  _Nonnull result) {
+        NSArray *resultarray =  [TheTestModel mj_objectArrayWithKeyValuesArray:result[@"data"][@"questionVoList"]]; //数组
+        self.dataArray = [NSArray array];
+        self.dataArray = resultarray;
+        [self.myTableView reloadData];
+        [self initquestionsDtoListArrayM];
+        //获取到试卷数据，可以上一题下一题
+        self.NextButtonBottomView.userInteractionEnabled = YES;
+    } failure:^(NSError * _Nonnull error) {
+        
+    }];
+}
 /**提交试卷*/
 - (void)requestmobileEvaluationsubmitExam{
     NSMutableDictionary *para = [NSMutableDictionary dictionary];
@@ -506,6 +538,33 @@
             ExaminationResultsViewController *ERvc = [[ExaminationResultsViewController alloc]init];
         ERvc.model = self.model;
         ERvc.from = ExaminationResultsHome;
+        [self.navigationController pushViewController:ERvc animated:YES];
+    } failure:^(NSError * _Nonnull error) {
+        
+    }];
+}
+
+/**每日一练提交试卷*/
+- (void)requestmobileEvaluationeveryExam{
+    NSMutableDictionary *para = [NSMutableDictionary dictionary];
+   
+    
+    //考试id
+//    para[@"id"] = [NSString stringWithFormat:@"%d",self.model.idx];
+//    //试卷id
+//    para[@"examPaperId"] = [NSString stringWithFormat:@"%d",self.model.examPaperId];
+    para[@"submitTime"] = [MyTimeInterval IntervalStringToDateString:[MyTimeInterval getNowDateSJC]];
+    
+    /**考试时长*/
+    int consumptionTime = [[MyTimeInterval getNowDateSJC] intValue] - [self.startTime intValue] ;
+    para[@"consumptionTime"] = [NSString stringWithFormat:@"%d",consumptionTime/60] ;
+    
+
+    para[@"questionsDtoList"] = self.questionsDtoListArrayM;
+    [LaborCenterRequestDatas mobileEvaluationsubmiteveryExamrequestDataWithparameters:para success:^(id  _Nonnull result) {
+            ExaminationResultsViewController *ERvc = [[ExaminationResultsViewController alloc]init];
+        ERvc.model = self.model;
+        ERvc.from = ExaminationResultsMeiRi;
         [self.navigationController pushViewController:ERvc animated:YES];
     } failure:^(NSError * _Nonnull error) {
         

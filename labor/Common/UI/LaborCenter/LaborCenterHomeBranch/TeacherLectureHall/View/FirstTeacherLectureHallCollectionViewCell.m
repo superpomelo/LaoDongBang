@@ -23,7 +23,7 @@
     self.bottomView.layer.masksToBounds = YES;
     self.playImageView.alpha = 0.8;
 }
-- (void)reloadData:(TeacherLectureHallModel*)model{
+- (void)reloadData:(TeacherLectureHallListModel*)model{
     self.nameLabel.text = model.auth;
     self.playNumLabel.text = [NSString stringWithFormat:@"播放量:%d",model.count];
     self.titleLabel.text = model.title;

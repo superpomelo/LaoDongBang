@@ -24,8 +24,9 @@
 #import "LearningCenterRequest.h"
 #import "NoNetWorkView.h"
 #import "UserInfoManager.h"
+#import "TeacherIntroducedDteailsViewController.h"
 
-@interface LaborCenterLessonDetailsViewController ()<UITableViewDelegate,UITableViewDataSource,UITextViewDelegate,ThirdLaborCenterLessonDetailsTableViewCellDelegate,SelVideoPlayerDelegate,LaborCenterLessonDetailsPlayEndViewDelegate,NoNetWorkViewDelegate>
+@interface LaborCenterLessonDetailsViewController ()<UITableViewDelegate,UITableViewDataSource,UITextViewDelegate,ThirdLaborCenterLessonDetailsTableViewCellDelegate,SelVideoPlayerDelegate,LaborCenterLessonDetailsPlayEndViewDelegate,NoNetWorkViewDelegate,SecondLaborCenterLessonDetailsTableViewCellDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (weak, nonatomic) IBOutlet UIView *TFBottomView;
 @property (weak, nonatomic) JLTextView *textView;
@@ -86,17 +87,22 @@
     [IQKeyboardManager sharedManager].enableAutoToolbar = NO; // 控制是否显示键盘上的工具条
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
 
+    //播放
+    [_player _playVideo];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
  [super viewWillDisappear:animated];
 // [IQKeyboardManager sharedManager].enable = YES;
     [IQKeyboardManager sharedManager].enableAutoToolbar = YES; // 控制是否显示键盘上的工具条
-    [_player _deallocPlayer];
+    //暂停播放
+    [_player _pauseVideo];
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
 
  }
-
+- (void)dealloc{
+    [_player _deallocPlayer];
+}
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     
@@ -386,6 +392,7 @@
         SecondLaborCenterLessonDetailsTableViewCell *cell = [self.myTableView dequeueReusableCellWithIdentifier:@"SecondLaborCenterLessonDetailsTableViewCellID"];
         if (self.model != nil) {
             [cell reloadData:self.model];
+            cell.delegate = self;
 
         }
         return cell;
@@ -471,6 +478,12 @@
 
 
 //MARK: - Utility - 多用途(功能)方法
+/**点击头像*/
+- (void)SecondLaborCenterLessonDetailsTableViewCelliconActiondelegate:(SecondLaborCenterLessonDetailsTableViewCell*)cell{
+    TeacherIntroducedDteailsViewController *Tvc = [[TeacherIntroducedDteailsViewController alloc]init];
+    Tvc.courseId = [self.courseId integerValue];
+    [self.navigationController pushViewController:Tvc animated:YES];
+}
 /**无网络下返回*/
 - (void)NoNetWorkViewBackButtonActiondelegate:(NoNetWorkView*)view{
     [self.navigationController popViewControllerAnimated:YES];

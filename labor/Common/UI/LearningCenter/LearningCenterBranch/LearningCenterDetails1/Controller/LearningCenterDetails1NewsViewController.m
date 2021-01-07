@@ -239,8 +239,11 @@
     [_textView resignFirstResponder];
     
 //    NSString *comment = _textView.text;
+//    if ([_textView.text containsString:@"额"]) {
+//        [SVProgressHUD showInfoWithStatus:@"发送失败，你看看你打的啥字，劝你不要以身试法，劝你耗子尾汁"];
+//        return;
+//    }
     [self requestmobileIndexsubmitComment];
- 
 }
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
@@ -248,6 +251,10 @@
         [self commentBtnClick:nil];
         return NO;
     }
+//    if ([_textView.text containsString:@"额"]) {
+//        [SVProgressHUD showInfoWithStatus:@"发送失败，你看看你打的啥字，劝你不要以身试法，劝你耗子尾汁"];
+//        return NO;
+//    }
     return YES;
 }
 
@@ -258,16 +265,13 @@
             NSMutableString *jScript = [[NSMutableString alloc]initWithString:@"var meta = document.createElement('meta'); meta.setAttribute('name', 'viewport'); meta.setAttribute('content', 'width=device-width'); document.getElementsByTagName('head')[0].appendChild(meta); var imgs = document.getElementsByTagName('img');for (var i in imgs){imgs[i].style.maxWidth='100%';imgs[i].style.height='auto';}"];
     
             //以下代码适配大小
-
-
             WKUserScript *wkUScript = [[WKUserScript alloc] initWithSource:[NSString stringWithFormat:@"%@",jScript] injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
             WKUserContentController *wkUController = [[WKUserContentController alloc] init];
             [wkUController addUserScript:wkUScript];
 
             WKWebViewConfiguration *wkWebConfig = [[WKWebViewConfiguration alloc] init];
         wkWebConfig.allowsInlineMediaPlayback = YES;
-
-            wkWebConfig.userContentController = wkUController;
+        wkWebConfig.userContentController = wkUController;
 //        _wk = [[WKWebView alloc]init];
 //        _wk.configuration = wkWebConfig;
         //    _wk = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, SCR_W, self.bottomView.bounds.size.height)];

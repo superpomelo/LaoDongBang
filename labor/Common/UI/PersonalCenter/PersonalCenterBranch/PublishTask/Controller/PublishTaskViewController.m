@@ -14,6 +14,7 @@
 #import "SelectClassView.h"
 #import "PublishTaskClassModel.h"
 #import "TeacherTimerViewController.h"
+#import "MyTaskAssessmentTeacherViewController.h"
 
 @interface PublishTaskViewController ()<UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate,UIImagePickerControllerDelegate,FirstPublishTaskTableViewCellDelegate,SelectClassViewDelegate,UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
@@ -23,14 +24,14 @@
 @property (nonatomic,strong)NSMutableArray *classIdArrayM;
 
 /**任务名称*/
-@property (nonatomic,strong)NSString *titlestr;
+//@property (nonatomic,strong)NSString *titlestr;
 /**活动地点*/
 @property (nonatomic,strong)NSString *activityAddress;
 
 @property (nonatomic,strong)SelectClassView *theselectclassView;
 
 /**活动描述*/
-@property (nonatomic,strong)NSString *content;
+//@property (nonatomic,strong)NSString *content;
 @property (nonatomic,strong)NSString *startTime;
 @property (nonatomic,strong)NSString *endTime;
 /**班级id*/
@@ -117,6 +118,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
         FirstPublishTaskTableViewCell *cell = [self.myTableView dequeueReusableCellWithIdentifier:@"FirstPublishTaskTableViewCellID"];
+    if (self.titlestr != nil) {
+        cell.titleTF.text = self.titlestr;
+    }
+    if (self.content != nil) {
+        cell.pleaseholdLabel.hidden = YES;
+        cell.myTextView.text = self.content;
+    }
     cell.delegate = self;
     [cell.titleTF addTarget:self action:@selector(titleTFAction:) forControlEvents:UIControlEventEditingChanged];
 //    cell.titleTF.delegate = self;
@@ -369,7 +377,10 @@
     }
     //班级id
   para[@"classId"] = classIdM;
-    
+    if (self.coverArrayM.count==0) {
+        [SVProgressHUD showInfoWithStatus:@"请添加活动封面图片"];
+        return;
+    }
     NSMutableString *strM = [NSMutableString string];
     for (int i=0; i<self.coverArrayM.count; i++) {
         if (i==0) {
@@ -386,7 +397,15 @@
   para[@"title"] = self.titlestr;
 
   [PersonalCenterRequestDatas activityrequestDataWithparameters:para success:^(id  _Nonnull result) {
-      [self.navigationController popViewControllerAnimated:YES];
+      
+      for (UIViewController *temp in self.navigationController.viewControllers) {
+              //返回考试冲关
+              if ([temp isKindOfClass:[MyTaskAssessmentTeacherViewController class]]) {
+                  [self.navigationController popToViewController:temp animated:YES];
+              }
+          
+      }
+//      [self.navigationController popViewControllerAnimated:YES];
     } failure:^(NSError * _Nonnull error) {
         
     }];

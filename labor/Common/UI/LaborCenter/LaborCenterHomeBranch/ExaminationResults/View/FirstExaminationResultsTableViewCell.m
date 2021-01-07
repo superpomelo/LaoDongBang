@@ -52,9 +52,10 @@
     // Configure the view for the selected state
 }
 - (void)reloadData:(ExaminationResultsModel*)model{
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%d",model.userScore] attributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize:48],NSForegroundColorAttributeName: [UIColor whiteColor]}];
+//    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:[NSString stringWithFormat:@"%d",model.userScore] attributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize:48],NSForegroundColorAttributeName: [UIColor whiteColor]}];
+//    self.userScoreLabel.attributedText = attributedString;
+
     self.totalQuestionNumLabel.text = [NSString stringWithFormat:@"%d",model.itemCount];
-    self.userScoreLabel.attributedText = attributedString;
     self.wrongQuestionLabel.text = [NSString stringWithFormat:@"%d",model.wrongNum];
     self.UseTimeLabel.text = [NSString stringWithFormat:@"%d",model.answerTime];
     self.endTimeLabel.text = model.endTime;

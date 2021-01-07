@@ -13,6 +13,7 @@
 #import "PersonalCenterRequestDatas.h"
 #import "MyTaskAssessmentTeacherModel.h"
 #import "ZeroTop150JieGuoTableViewCell.h"
+#import "TemplateChooseViewController.h"
 
 @interface MyTaskAssessmentTeacherViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *myTableView;
@@ -21,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *unfinishedButton;
 @property (weak, nonatomic) IBOutlet UILabel *lineLabel;
 @property (weak, nonatomic) IBOutlet UIView *publishButtomView;
+@property (weak, nonatomic) IBOutlet UIButton *publishButton;
+
 @property (nonatomic,strong)NSArray *dataArray;
 /**0进行中，1已结束*/
 @property (nonatomic,assign)int tagT;
@@ -55,6 +58,7 @@
 
 //MARK: - Initalization - 初始化
 - (void)initUI{
+    self.publishButton.layer.cornerRadius = self.publishButton.bounds.size.height/2;
     self.ongoingButton.selected = YES;
     self.publishButtomView.layer.cornerRadius = 30/2;
 }
@@ -188,14 +192,30 @@
         self.lineLabel.center = CGPointMake(sender.center.x, self.lineLabel.center.y);
     }];
 }
+/**选择模版*/
+- (IBAction)publishButtonAction:(UIButton*)sender {
+    //限制点击
+    sender.userInteractionEnabled = NO;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        sender.userInteractionEnabled = YES;
+    });
+    TemplateChooseViewController *Tvc = [[TemplateChooseViewController alloc]init];
+    [self.navigationController pushViewController:Tvc animated:YES];
+    
+}
+
 /**发布*/
-- (IBAction)publishButtonAction:(id)sender {
+- (IBAction)bottompublishButtonAction:(UIButton*)sender {
+    //限制点击
+    sender.userInteractionEnabled = NO;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        sender.userInteractionEnabled = YES;
+    });
     PublishTaskViewController *PTvc = [[PublishTaskViewController alloc]init];
     [PTvc setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:PTvc animated:YES];
+//    [self requestactivity];
 }
-
-
 //MARK: - Utility - 多用途(功能)方法
 //MARK: - Network request - 网络请求
 /**教师端已结束的活动*/

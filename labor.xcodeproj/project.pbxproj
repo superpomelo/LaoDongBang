@@ -28,6 +28,18 @@
 		1F026A7C251B387900084DAB /* xinwenModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F026A7B251B387900084DAB /* xinwenModel.m */; };
 		1F026A82251B3DCA00084DAB /* quanziModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F026A81251B3DCA00084DAB /* quanziModel.m */; };
 		1F026A88251C76DD00084DAB /* LaborLunBoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F026A87251C76DC00084DAB /* LaborLunBoModel.m */; };
+		1F02D82C25A2E8FD002E24D6 /* SecondTeacherIntroducedDteailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F02D82A25A2E8FD002E24D6 /* SecondTeacherIntroducedDteailsTableViewCell.m */; };
+		1F02D82D25A2E8FD002E24D6 /* SecondTeacherIntroducedDteailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F02D82B25A2E8FD002E24D6 /* SecondTeacherIntroducedDteailsTableViewCell.xib */; };
+		1F02D83825A4331A002E24D6 /* TemplateChooseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F02D83625A4331A002E24D6 /* TemplateChooseViewController.m */; };
+		1F02D83925A4331A002E24D6 /* TemplateChooseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F02D83725A4331A002E24D6 /* TemplateChooseViewController.xib */; };
+		1F02D84025A4333C002E24D6 /* FirstTemplateChooseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F02D83E25A4333C002E24D6 /* FirstTemplateChooseTableViewCell.m */; };
+		1F02D84125A4333C002E24D6 /* FirstTemplateChooseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F02D83F25A4333C002E24D6 /* FirstTemplateChooseTableViewCell.xib */; };
+		1F02D84C25A469B8002E24D6 /* TeacherLectureHallListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F02D84A25A469B8002E24D6 /* TeacherLectureHallListViewController.m */; };
+		1F02D84D25A469B8002E24D6 /* TeacherLectureHallListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F02D84B25A469B8002E24D6 /* TeacherLectureHallListViewController.xib */; };
+		1F02D85C25A46AD3002E24D6 /* FirstTeacherLectureHallListCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F02D85A25A46AD3002E24D6 /* FirstTeacherLectureHallListCollectionViewCell.m */; };
+		1F02D85D25A46AD3002E24D6 /* FirstTeacherLectureHallListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F02D85B25A46AD3002E24D6 /* FirstTeacherLectureHallListCollectionViewCell.xib */; };
+		1F02D86625A46E5D002E24D6 /* TeacherLectureHallListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F02D86525A46E5D002E24D6 /* TeacherLectureHallListModel.m */; };
+		1F02D86C25A56A72002E24D6 /* TeacherLectureHallListSModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F02D86B25A56A72002E24D6 /* TeacherLectureHallListSModel.m */; };
 		1F03093225551BCD00B7C66B /* LearningCenterDetails1NewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F03092F25551BCD00B7C66B /* LearningCenterDetails1NewsViewController.xib */; };
 		1F03093325551BCD00B7C66B /* LearningCenterDetails1NewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F03093125551BCD00B7C66B /* LearningCenterDetails1NewsViewController.m */; };
 		1F03093A25551F3200B7C66B /* FirstLearningCenterDetails1NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F03093725551F3200B7C66B /* FirstLearningCenterDetails1NewsTableViewCell.xib */; };
@@ -152,6 +164,8 @@
 		1F2B6F5925772862002ACB10 /* SOURCEHANSERIFCN-BOLD.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 1F2B6F5625772862002ACB10 /* SOURCEHANSERIFCN-BOLD.OTF */; };
 		1F2B6F5A25772862002ACB10 /* SOURCEHANSERIFCN-MEDIUM.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 1F2B6F5725772862002ACB10 /* SOURCEHANSERIFCN-MEDIUM.OTF */; };
 		1F2B6F5B25772862002ACB10 /* zidingyicu.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 1F2B6F5825772862002ACB10 /* zidingyicu.OTF */; };
+		1F31E3A9259579E100C24954 /* YsyPopHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F31E3A4259579E100C24954 /* YsyPopHelper.m */; };
+		1F31E3AA259579E100C24954 /* YsyPopAnimationManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F31E3A8259579E100C24954 /* YsyPopAnimationManage.m */; };
 		1F34CA0E25369E2000541B71 /* FirstMyClassCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F34CA0C25369E2000541B71 /* FirstMyClassCollectionViewCell.m */; };
 		1F34CA0F25369E2000541B71 /* FirstMyClassCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F34CA0D25369E2000541B71 /* FirstMyClassCollectionViewCell.xib */; };
 		1F34CA152536C82300541B71 /* PublishTaskClassStudentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F34CA142536C82300541B71 /* PublishTaskClassStudentModel.m */; };
@@ -225,6 +239,15 @@
 		1F3C814C25242DB800D5D5AE /* FourthMyTaskAssessmentTeacher3TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3C814A25242DB800D5D5AE /* FourthMyTaskAssessmentTeacher3TableViewCell.m */; };
 		1F3C814D25242DB800D5D5AE /* FourthMyTaskAssessmentTeacher3TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F3C814B25242DB800D5D5AE /* FourthMyTaskAssessmentTeacher3TableViewCell.xib */; };
 		1F3D740E2548032200B3AA68 /* GetFileSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F3D740D2548032200B3AA68 /* GetFileSpace.m */; };
+		1F43FEB6259C160C008E4504 /* EightLaborCenterHomeNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F43FEB1259C160B008E4504 /* EightLaborCenterHomeNewsTableViewCell.xib */; };
+		1F43FEB7259C160C008E4504 /* EightLaborCenterHomeNewsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F43FEB2259C160B008E4504 /* EightLaborCenterHomeNewsTableViewCell.m */; };
+		1F43FEB8259C160C008E4504 /* XBTextLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F43FEB4259C160C008E4504 /* XBTextLoopView.m */; };
+		1F43FEC3259C6706008E4504 /* TeacherIntroducedDteailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F43FEC1259C6706008E4504 /* TeacherIntroducedDteailsViewController.m */; };
+		1F43FEC4259C6706008E4504 /* TeacherIntroducedDteailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F43FEC2259C6706008E4504 /* TeacherIntroducedDteailsViewController.xib */; };
+		1F43FECE259C7E34008E4504 /* FirstTeacherIntroducedDteailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F43FECC259C7E34008E4504 /* FirstTeacherIntroducedDteailsTableViewCell.m */; };
+		1F43FECF259C7E34008E4504 /* FirstTeacherIntroducedDteailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F43FECD259C7E34008E4504 /* FirstTeacherIntroducedDteailsTableViewCell.xib */; };
+		1F43FEDA259C82E8008E4504 /* TestClassificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F43FED8259C82E8008E4504 /* TestClassificationViewController.m */; };
+		1F43FEDB259C82E8008E4504 /* TestClassificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F43FED9259C82E8008E4504 /* TestClassificationViewController.xib */; };
 		1F4A41D32508DDA300ADE536 /* FirstChooseQuestionCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4A41D12508DDA300ADE536 /* FirstChooseQuestionCollectionViewCell.m */; };
 		1F4A41D42508DDA300ADE536 /* FirstChooseQuestionCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F4A41D22508DDA300ADE536 /* FirstChooseQuestionCollectionViewCell.xib */; };
 		1F4A41D7250A069C00ADE536 /* WrongChooseQuestionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F4A41D6250A069C00ADE536 /* WrongChooseQuestionView.m */; };
@@ -273,6 +296,11 @@
 		1F54539C2505CD0600C3F3A3 /* FirstExaminationResultsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F54539A2505CD0600C3F3A3 /* FirstExaminationResultsTableViewCell.xib */; };
 		1F54539F2505F6D600C3F3A3 /* TheTestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F54539E2505F6D600C3F3A3 /* TheTestModel.m */; };
 		1F5453A22505FC8400C3F3A3 /* optionsContentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F5453A12505FC8400C3F3A3 /* optionsContentModel.m */; };
+		1F552DF925A59D50002FECF8 /* TeacherIntroducedDteailsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F552DF825A59D50002FECF8 /* TeacherIntroducedDteailsModel.m */; };
+		1F552E0425A5AFC7002FECF8 /* LaoShiXiangQingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F552E0225A5AFC7002FECF8 /* LaoShiXiangQingViewController.m */; };
+		1F552E0525A5AFC7002FECF8 /* LaoShiXiangQingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F552E0325A5AFC7002FECF8 /* LaoShiXiangQingViewController.xib */; };
+		1F552E0C25A5AFEE002FECF8 /* FirstLaoShiXiangQingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F552E0A25A5AFEE002FECF8 /* FirstLaoShiXiangQingTableViewCell.m */; };
+		1F552E0D25A5AFEE002FECF8 /* FirstLaoShiXiangQingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F552E0B25A5AFEE002FECF8 /* FirstLaoShiXiangQingTableViewCell.xib */; };
 		1F593FD424F34FA7000B4B2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F593FD324F34FA7000B4B2D /* AppDelegate.m */; };
 		1F593FDD24F34FA7000B4B2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F593FDB24F34FA7000B4B2D /* Main.storyboard */; };
 		1F593FDF24F34FAA000B4B2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F593FDE24F34FAA000B4B2D /* Assets.xcassets */; };
@@ -604,6 +632,25 @@
 		1F026A81251B3DCA00084DAB /* quanziModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = quanziModel.m; sourceTree = "<group>"; };
 		1F026A86251C76DC00084DAB /* LaborLunBoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaborLunBoModel.h; sourceTree = "<group>"; };
 		1F026A87251C76DC00084DAB /* LaborLunBoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaborLunBoModel.m; sourceTree = "<group>"; };
+		1F02D82925A2E8FD002E24D6 /* SecondTeacherIntroducedDteailsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondTeacherIntroducedDteailsTableViewCell.h; sourceTree = "<group>"; };
+		1F02D82A25A2E8FD002E24D6 /* SecondTeacherIntroducedDteailsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondTeacherIntroducedDteailsTableViewCell.m; sourceTree = "<group>"; };
+		1F02D82B25A2E8FD002E24D6 /* SecondTeacherIntroducedDteailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondTeacherIntroducedDteailsTableViewCell.xib; sourceTree = "<group>"; };
+		1F02D83525A4331A002E24D6 /* TemplateChooseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TemplateChooseViewController.h; sourceTree = "<group>"; };
+		1F02D83625A4331A002E24D6 /* TemplateChooseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TemplateChooseViewController.m; sourceTree = "<group>"; };
+		1F02D83725A4331A002E24D6 /* TemplateChooseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TemplateChooseViewController.xib; sourceTree = "<group>"; };
+		1F02D83D25A4333C002E24D6 /* FirstTemplateChooseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstTemplateChooseTableViewCell.h; sourceTree = "<group>"; };
+		1F02D83E25A4333C002E24D6 /* FirstTemplateChooseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstTemplateChooseTableViewCell.m; sourceTree = "<group>"; };
+		1F02D83F25A4333C002E24D6 /* FirstTemplateChooseTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstTemplateChooseTableViewCell.xib; sourceTree = "<group>"; };
+		1F02D84925A469B8002E24D6 /* TeacherLectureHallListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeacherLectureHallListViewController.h; sourceTree = "<group>"; };
+		1F02D84A25A469B8002E24D6 /* TeacherLectureHallListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeacherLectureHallListViewController.m; sourceTree = "<group>"; };
+		1F02D84B25A469B8002E24D6 /* TeacherLectureHallListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeacherLectureHallListViewController.xib; sourceTree = "<group>"; };
+		1F02D85925A46AD3002E24D6 /* FirstTeacherLectureHallListCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstTeacherLectureHallListCollectionViewCell.h; sourceTree = "<group>"; };
+		1F02D85A25A46AD3002E24D6 /* FirstTeacherLectureHallListCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstTeacherLectureHallListCollectionViewCell.m; sourceTree = "<group>"; };
+		1F02D85B25A46AD3002E24D6 /* FirstTeacherLectureHallListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstTeacherLectureHallListCollectionViewCell.xib; sourceTree = "<group>"; };
+		1F02D86425A46E5D002E24D6 /* TeacherLectureHallListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeacherLectureHallListModel.h; sourceTree = "<group>"; };
+		1F02D86525A46E5D002E24D6 /* TeacherLectureHallListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeacherLectureHallListModel.m; sourceTree = "<group>"; };
+		1F02D86A25A56A72002E24D6 /* TeacherLectureHallListSModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeacherLectureHallListSModel.h; sourceTree = "<group>"; };
+		1F02D86B25A56A72002E24D6 /* TeacherLectureHallListSModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeacherLectureHallListSModel.m; sourceTree = "<group>"; };
 		1F03092F25551BCD00B7C66B /* LearningCenterDetails1NewsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LearningCenterDetails1NewsViewController.xib; sourceTree = "<group>"; };
 		1F03093025551BCD00B7C66B /* LearningCenterDetails1NewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearningCenterDetails1NewsViewController.h; sourceTree = "<group>"; };
 		1F03093125551BCD00B7C66B /* LearningCenterDetails1NewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearningCenterDetails1NewsViewController.m; sourceTree = "<group>"; };
@@ -792,6 +839,11 @@
 		1F2B6F5625772862002ACB10 /* SOURCEHANSERIFCN-BOLD.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SOURCEHANSERIFCN-BOLD.OTF"; sourceTree = "<group>"; };
 		1F2B6F5725772862002ACB10 /* SOURCEHANSERIFCN-MEDIUM.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SOURCEHANSERIFCN-MEDIUM.OTF"; sourceTree = "<group>"; };
 		1F2B6F5825772862002ACB10 /* zidingyicu.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = zidingyicu.OTF; sourceTree = "<group>"; };
+		1F31E3A4259579E100C24954 /* YsyPopHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YsyPopHelper.m; sourceTree = "<group>"; };
+		1F31E3A5259579E100C24954 /* YsyPopAnimationManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YsyPopAnimationManage.h; sourceTree = "<group>"; };
+		1F31E3A6259579E100C24954 /* YsyPopHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YsyPopHelper.h; sourceTree = "<group>"; };
+		1F31E3A7259579E100C24954 /* YsyPopMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YsyPopMacro.h; sourceTree = "<group>"; };
+		1F31E3A8259579E100C24954 /* YsyPopAnimationManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YsyPopAnimationManage.m; sourceTree = "<group>"; };
 		1F34CA0B25369E2000541B71 /* FirstMyClassCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstMyClassCollectionViewCell.h; sourceTree = "<group>"; };
 		1F34CA0C25369E2000541B71 /* FirstMyClassCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstMyClassCollectionViewCell.m; sourceTree = "<group>"; };
 		1F34CA0D25369E2000541B71 /* FirstMyClassCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstMyClassCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -909,6 +961,20 @@
 		1F3C814B25242DB800D5D5AE /* FourthMyTaskAssessmentTeacher3TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FourthMyTaskAssessmentTeacher3TableViewCell.xib; sourceTree = "<group>"; };
 		1F3D740C2548032200B3AA68 /* GetFileSpace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetFileSpace.h; sourceTree = "<group>"; };
 		1F3D740D2548032200B3AA68 /* GetFileSpace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetFileSpace.m; sourceTree = "<group>"; };
+		1F43FEB1259C160B008E4504 /* EightLaborCenterHomeNewsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EightLaborCenterHomeNewsTableViewCell.xib; sourceTree = "<group>"; };
+		1F43FEB2259C160B008E4504 /* EightLaborCenterHomeNewsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EightLaborCenterHomeNewsTableViewCell.m; sourceTree = "<group>"; };
+		1F43FEB3259C160C008E4504 /* XBTextLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBTextLoopView.h; sourceTree = "<group>"; };
+		1F43FEB4259C160C008E4504 /* XBTextLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBTextLoopView.m; sourceTree = "<group>"; };
+		1F43FEB5259C160C008E4504 /* EightLaborCenterHomeNewsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EightLaborCenterHomeNewsTableViewCell.h; sourceTree = "<group>"; };
+		1F43FEC0259C6706008E4504 /* TeacherIntroducedDteailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeacherIntroducedDteailsViewController.h; sourceTree = "<group>"; };
+		1F43FEC1259C6706008E4504 /* TeacherIntroducedDteailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeacherIntroducedDteailsViewController.m; sourceTree = "<group>"; };
+		1F43FEC2259C6706008E4504 /* TeacherIntroducedDteailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeacherIntroducedDteailsViewController.xib; sourceTree = "<group>"; };
+		1F43FECB259C7E34008E4504 /* FirstTeacherIntroducedDteailsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstTeacherIntroducedDteailsTableViewCell.h; sourceTree = "<group>"; };
+		1F43FECC259C7E34008E4504 /* FirstTeacherIntroducedDteailsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstTeacherIntroducedDteailsTableViewCell.m; sourceTree = "<group>"; };
+		1F43FECD259C7E34008E4504 /* FirstTeacherIntroducedDteailsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstTeacherIntroducedDteailsTableViewCell.xib; sourceTree = "<group>"; };
+		1F43FED7259C82E8008E4504 /* TestClassificationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestClassificationViewController.h; sourceTree = "<group>"; };
+		1F43FED8259C82E8008E4504 /* TestClassificationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestClassificationViewController.m; sourceTree = "<group>"; };
+		1F43FED9259C82E8008E4504 /* TestClassificationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TestClassificationViewController.xib; sourceTree = "<group>"; };
 		1F4A41D02508DDA300ADE536 /* FirstChooseQuestionCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstChooseQuestionCollectionViewCell.h; sourceTree = "<group>"; };
 		1F4A41D12508DDA300ADE536 /* FirstChooseQuestionCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstChooseQuestionCollectionViewCell.m; sourceTree = "<group>"; };
 		1F4A41D22508DDA300ADE536 /* FirstChooseQuestionCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstChooseQuestionCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -990,6 +1056,14 @@
 		1F54539E2505F6D600C3F3A3 /* TheTestModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TheTestModel.m; sourceTree = "<group>"; };
 		1F5453A02505FC8400C3F3A3 /* optionsContentModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = optionsContentModel.h; sourceTree = "<group>"; };
 		1F5453A12505FC8400C3F3A3 /* optionsContentModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = optionsContentModel.m; sourceTree = "<group>"; };
+		1F552DF725A59D50002FECF8 /* TeacherIntroducedDteailsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TeacherIntroducedDteailsModel.h; sourceTree = "<group>"; };
+		1F552DF825A59D50002FECF8 /* TeacherIntroducedDteailsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeacherIntroducedDteailsModel.m; sourceTree = "<group>"; };
+		1F552E0125A5AFC7002FECF8 /* LaoShiXiangQingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaoShiXiangQingViewController.h; sourceTree = "<group>"; };
+		1F552E0225A5AFC7002FECF8 /* LaoShiXiangQingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaoShiXiangQingViewController.m; sourceTree = "<group>"; };
+		1F552E0325A5AFC7002FECF8 /* LaoShiXiangQingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaoShiXiangQingViewController.xib; sourceTree = "<group>"; };
+		1F552E0925A5AFEE002FECF8 /* FirstLaoShiXiangQingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstLaoShiXiangQingTableViewCell.h; sourceTree = "<group>"; };
+		1F552E0A25A5AFEE002FECF8 /* FirstLaoShiXiangQingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstLaoShiXiangQingTableViewCell.m; sourceTree = "<group>"; };
+		1F552E0B25A5AFEE002FECF8 /* FirstLaoShiXiangQingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstLaoShiXiangQingTableViewCell.xib; sourceTree = "<group>"; };
 		1F593FCF24F34FA7000B4B2D /* labor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = labor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F593FD224F34FA7000B4B2D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1F593FD324F34FA7000B4B2D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -1660,6 +1734,82 @@
 			path = "判断机型";
 			sourceTree = "<group>";
 		};
+		1F02D83125A43178002E24D6 /* TemplateChoose */ = {
+			isa = PBXGroup;
+			children = (
+				1F02D83325A431AB002E24D6 /* Controller */,
+				1F02D83425A431AB002E24D6 /* Model */,
+				1F02D83225A431AB002E24D6 /* view */,
+			);
+			path = TemplateChoose;
+			sourceTree = "<group>";
+		};
+		1F02D83225A431AB002E24D6 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				1F02D83D25A4333C002E24D6 /* FirstTemplateChooseTableViewCell.h */,
+				1F02D83E25A4333C002E24D6 /* FirstTemplateChooseTableViewCell.m */,
+				1F02D83F25A4333C002E24D6 /* FirstTemplateChooseTableViewCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		1F02D83325A431AB002E24D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1F02D83525A4331A002E24D6 /* TemplateChooseViewController.h */,
+				1F02D83625A4331A002E24D6 /* TemplateChooseViewController.m */,
+				1F02D83725A4331A002E24D6 /* TemplateChooseViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1F02D83425A431AB002E24D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1F02D84525A4699D002E24D6 /* TeacherLectureHallList */ = {
+			isa = PBXGroup;
+			children = (
+				1F02D84625A4699D002E24D6 /* Controller */,
+				1F02D84725A4699D002E24D6 /* Model */,
+				1F02D84825A4699D002E24D6 /* View */,
+			);
+			path = TeacherLectureHallList;
+			sourceTree = "<group>";
+		};
+		1F02D84625A4699D002E24D6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1F02D84925A469B8002E24D6 /* TeacherLectureHallListViewController.h */,
+				1F02D84A25A469B8002E24D6 /* TeacherLectureHallListViewController.m */,
+				1F02D84B25A469B8002E24D6 /* TeacherLectureHallListViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1F02D84725A4699D002E24D6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1F02D86A25A56A72002E24D6 /* TeacherLectureHallListSModel.h */,
+				1F02D86B25A56A72002E24D6 /* TeacherLectureHallListSModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1F02D84825A4699D002E24D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F02D85925A46AD3002E24D6 /* FirstTeacherLectureHallListCollectionViewCell.h */,
+				1F02D85A25A46AD3002E24D6 /* FirstTeacherLectureHallListCollectionViewCell.m */,
+				1F02D85B25A46AD3002E24D6 /* FirstTeacherLectureHallListCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1F0AFCEE253162F800C4A23C /* TheProblemOfFeedback */ = {
 			isa = PBXGroup;
 			children = (
@@ -2326,6 +2476,26 @@
 			path = "宋体otf";
 			sourceTree = "<group>";
 		};
+		1F31E3A2259579E100C24954 /* 弹窗 */ = {
+			isa = PBXGroup;
+			children = (
+				1F31E3A3259579E100C24954 /* YsyPopHelper */,
+			);
+			path = "弹窗";
+			sourceTree = "<group>";
+		};
+		1F31E3A3259579E100C24954 /* YsyPopHelper */ = {
+			isa = PBXGroup;
+			children = (
+				1F31E3A4259579E100C24954 /* YsyPopHelper.m */,
+				1F31E3A5259579E100C24954 /* YsyPopAnimationManage.h */,
+				1F31E3A6259579E100C24954 /* YsyPopHelper.h */,
+				1F31E3A7259579E100C24954 /* YsyPopMacro.h */,
+				1F31E3A8259579E100C24954 /* YsyPopAnimationManage.m */,
+			);
+			path = YsyPopHelper;
+			sourceTree = "<group>";
+		};
 		1F34CA192536DE1A00541B71 /* LaborCenterHomeSearchResult */ = {
 			isa = PBXGroup;
 			children = (
@@ -2934,6 +3104,82 @@
 			path = "获取文件大小";
 			sourceTree = "<group>";
 		};
+		1F43FEBC259C65E4008E4504 /* TeacherIntroduced */ = {
+			isa = PBXGroup;
+			children = (
+				1F43FEBD259C65E4008E4504 /* Controller */,
+				1F43FEBE259C65E4008E4504 /* Model */,
+				1F43FEBF259C65E4008E4504 /* View */,
+			);
+			path = TeacherIntroduced;
+			sourceTree = "<group>";
+		};
+		1F43FEBD259C65E4008E4504 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1F43FEC0259C6706008E4504 /* TeacherIntroducedDteailsViewController.h */,
+				1F43FEC1259C6706008E4504 /* TeacherIntroducedDteailsViewController.m */,
+				1F43FEC2259C6706008E4504 /* TeacherIntroducedDteailsViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1F43FEBE259C65E4008E4504 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1F552DF725A59D50002FECF8 /* TeacherIntroducedDteailsModel.h */,
+				1F552DF825A59D50002FECF8 /* TeacherIntroducedDteailsModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1F43FEBF259C65E4008E4504 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F43FECB259C7E34008E4504 /* FirstTeacherIntroducedDteailsTableViewCell.h */,
+				1F43FECC259C7E34008E4504 /* FirstTeacherIntroducedDteailsTableViewCell.m */,
+				1F43FECD259C7E34008E4504 /* FirstTeacherIntroducedDteailsTableViewCell.xib */,
+				1F02D82925A2E8FD002E24D6 /* SecondTeacherIntroducedDteailsTableViewCell.h */,
+				1F02D82A25A2E8FD002E24D6 /* SecondTeacherIntroducedDteailsTableViewCell.m */,
+				1F02D82B25A2E8FD002E24D6 /* SecondTeacherIntroducedDteailsTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1F43FED3259C8213008E4504 /* TestClassification */ = {
+			isa = PBXGroup;
+			children = (
+				1F43FED4259C8213008E4504 /* Controller */,
+				1F43FED5259C8213008E4504 /* Model */,
+				1F43FED6259C8213008E4504 /* View */,
+			);
+			path = TestClassification;
+			sourceTree = "<group>";
+		};
+		1F43FED4259C8213008E4504 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1F43FED7259C82E8008E4504 /* TestClassificationViewController.h */,
+				1F43FED8259C82E8008E4504 /* TestClassificationViewController.m */,
+				1F43FED9259C82E8008E4504 /* TestClassificationViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1F43FED5259C8213008E4504 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1F43FED6259C8213008E4504 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1F4A41DF250B1AA700ADE536 /* 学习 */ = {
 			isa = PBXGroup;
 			children = (
@@ -3067,6 +3313,43 @@
 			path = "获取视频第一帧";
 			sourceTree = "<group>";
 		};
+		1F552DFD25A5AFB5002FECF8 /* LaoShiXiangQing */ = {
+			isa = PBXGroup;
+			children = (
+				1F552DFE25A5AFB5002FECF8 /* Controller */,
+				1F552DFF25A5AFB5002FECF8 /* Model */,
+				1F552E0025A5AFB5002FECF8 /* View */,
+			);
+			path = LaoShiXiangQing;
+			sourceTree = "<group>";
+		};
+		1F552DFE25A5AFB5002FECF8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1F552E0125A5AFC7002FECF8 /* LaoShiXiangQingViewController.h */,
+				1F552E0225A5AFC7002FECF8 /* LaoShiXiangQingViewController.m */,
+				1F552E0325A5AFC7002FECF8 /* LaoShiXiangQingViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1F552DFF25A5AFB5002FECF8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1F552E0025A5AFB5002FECF8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1F552E0925A5AFEE002FECF8 /* FirstLaoShiXiangQingTableViewCell.h */,
+				1F552E0A25A5AFEE002FECF8 /* FirstLaoShiXiangQingTableViewCell.m */,
+				1F552E0B25A5AFEE002FECF8 /* FirstLaoShiXiangQingTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1F593FC624F34FA7000B4B2D = {
 			isa = PBXGroup;
 			children = (
@@ -3157,6 +3440,7 @@
 		1F59400A24F35106000B4B2D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				1F31E3A2259579E100C24954 /* 弹窗 */,
 				1F2B6F5525772862002ACB10 /* 宋体otf */,
 				1F2B6F4E2575F345002ACB10 /* BaseViewController */,
 				1F2B6F072570F56B002ACB10 /* rottie全屏 */,
@@ -3406,6 +3690,11 @@
 		1F5940ED24F39879000B4B2D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1F43FEB5259C160C008E4504 /* EightLaborCenterHomeNewsTableViewCell.h */,
+				1F43FEB2259C160B008E4504 /* EightLaborCenterHomeNewsTableViewCell.m */,
+				1F43FEB1259C160B008E4504 /* EightLaborCenterHomeNewsTableViewCell.xib */,
+				1F43FEB3259C160C008E4504 /* XBTextLoopView.h */,
+				1F43FEB4259C160C008E4504 /* XBTextLoopView.m */,
 				1F5940F824F39AF2000B4B2D /* FirstLaborCenterHomeTableViewCell.h */,
 				1F5940F924F39AF2000B4B2D /* FirstLaborCenterHomeTableViewCell.m */,
 				1F5940FA24F39AF2000B4B2D /* FirstLaborCenterHomeTableViewCell.xib */,
@@ -3431,6 +3720,10 @@
 		1F59410C24F3A5F3000B4B2D /* LaborCenterHomeBranch */ = {
 			isa = PBXGroup;
 			children = (
+				1F552DFD25A5AFB5002FECF8 /* LaoShiXiangQing */,
+				1F02D84525A4699D002E24D6 /* TeacherLectureHallList */,
+				1F43FED3259C8213008E4504 /* TestClassification */,
+				1F43FEBC259C65E4008E4504 /* TeacherIntroduced */,
 				1F2B6ED92570C422002ACB10 /* gonggao */,
 				1F34CA192536DE1A00541B71 /* LaborCenterHomeSearchResult */,
 				1FF14CE82507362700CB5486 /* LaborCenterLessonDetails */,
@@ -3474,6 +3767,8 @@
 			children = (
 				1F54538F25035B2700C3F3A3 /* TeacherLectureHallModel.h */,
 				1F54539025035B2700C3F3A3 /* TeacherLectureHallModel.m */,
+				1F02D86425A46E5D002E24D6 /* TeacherLectureHallListModel.h */,
+				1F02D86525A46E5D002E24D6 /* TeacherLectureHallListModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -4233,6 +4528,7 @@
 		1F59423024F511B7000B4B2D /* PersonalCenterBranch */ = {
 			isa = PBXGroup;
 			children = (
+				1F02D83125A43178002E24D6 /* TemplateChoose */,
 				1F34CA3C25392DD100541B71 /* InternalChangePassword */,
 				1F0AFD412535833300C4A23C /* MyTaskAssessmentTeacherDetails */,
 				1F0AFD292534571000C4A23C /* TeacherTimer */,
@@ -5152,6 +5448,7 @@
 				1F5940F224F3989A000B4B2D /* LaborCenterHomeViewController.xib in Resources */,
 				1F34CA4425392E5100541B71 /* InternalChangePasswordViewController.xib in Resources */,
 				1FFB4AB024F8B3DD003C5FC8 /* RegisteredSuccessfullyViewController.xib in Resources */,
+				1F43FEC4259C6706008E4504 /* TeacherIntroducedDteailsViewController.xib in Resources */,
 				1F38A8362500DDD20032A748 /* ActivityCompletionDetailViewController.xib in Resources */,
 				1F59410B24F39EB4000B4B2D /* FourthLaborCenterHomeTableViewCell.xib in Resources */,
 				1F4ECF9E252338E600297AA3 /* MyTaskAssessmentTeacherViewController.xib in Resources */,
@@ -5176,6 +5473,7 @@
 				1F59418024F49BF0000B4B2D /* TheMessageCenterViewController.xib in Resources */,
 				1F59414824F3B77A000B4B2D /* AssessmentOfTheTaskViewController.xib in Resources */,
 				1F5F1E39251C93540074B550 /* FivethLearningCenterDetails1TableViewCell.xib in Resources */,
+				1F02D82D25A2E8FD002E24D6 /* SecondTeacherIntroducedDteailsTableViewCell.xib in Resources */,
 				1F0EF6CD24F6301C007506E7 /* SecondMyPointsTableViewCell.xib in Resources */,
 				1F5941ED24F4E991000B4B2D /* SecondMyCircleCenterDetails1TableViewCell.xib in Resources */,
 				1F03093A25551F3200B7C66B /* FirstLearningCenterDetails1NewsTableViewCell.xib in Resources */,
@@ -5228,6 +5526,8 @@
 				1F34CA212536DEA400541B71 /* LaborCenterHomeSearchResultViewController.xib in Resources */,
 				1F2B6F5925772862002ACB10 /* SOURCEHANSERIFCN-BOLD.OTF in Resources */,
 				1F59413F24F3B26A000B4B2D /* ExaminationResultsViewController.xib in Resources */,
+				1F552E0D25A5AFEE002FECF8 /* FirstLaoShiXiangQingTableViewCell.xib in Resources */,
+				1F43FECF259C7E34008E4504 /* FirstTeacherIntroducedDteailsTableViewCell.xib in Resources */,
 				1F59410124F39B2C000B4B2D /* SecondLaborCenterHomeTableViewCell.xib in Resources */,
 				1F59411E24F3A717000B4B2D /* TheExamRushedOffViewController.xib in Resources */,
 				1FF14D04250736D400CB5486 /* FourthLaborCenterLessonDetailsTableViewCell.xib in Resources */,
@@ -5235,6 +5535,7 @@
 				1F91687024FE4EFA00D3D7A4 /* TheTestTipsView.xib in Resources */,
 				1F593FDF24F34FAA000B4B2D /* Assets.xcassets in Resources */,
 				1F5941B624F4DDA6000B4B2D /* ThirdLearningCenterDetails2TableViewCell.xib in Resources */,
+				1F43FEDB259C82E8008E4504 /* TestClassificationViewController.xib in Resources */,
 				1F59410624F39CCE000B4B2D /* ThirdLaborCenterHomeTableViewCell.xib in Resources */,
 				1F59407A24F3520E000B4B2D /* PersonalCenterHomeViewController.xib in Resources */,
 				1F5940E324F38956000B4B2D /* FourthLearningCenterHomeTableViewCell.xib in Resources */,
@@ -5263,6 +5564,7 @@
 				1F0EF6F324F66162007506E7 /* TheIntegralsignInViewController.xib in Resources */,
 				1FFB4ABA24F90B85003C5FC8 /* FirstTeacherLectureHallCollectionViewCell.xib in Resources */,
 				1F59421324F4FBD0000B4B2D /* NewCirclesViewController.xib in Resources */,
+				1F43FEB6259C160C008E4504 /* EightLaborCenterHomeNewsTableViewCell.xib in Resources */,
 				1F59411524F3A62E000B4B2D /* TeacherLectureHallViewController.xib in Resources */,
 				1FF14D09250736F200CB5486 /* FivethLaborCenterLessonDetailsTableViewCell.xib in Resources */,
 				1F283A0924F7A67800F99A9B /* FirstPublishTaskTableViewCell.xib in Resources */,
@@ -5270,6 +5572,7 @@
 				1F88DC21253D5D31003B428E /* ZeroJieGuoTableViewCell.xib in Resources */,
 				1F3C813525242B9300D5D5AE /* FirstMyTaskAssessmentTeacher3TableViewCell.xib in Resources */,
 				1F3C814D25242DB800D5D5AE /* FourthMyTaskAssessmentTeacher3TableViewCell.xib in Resources */,
+				1F02D84125A4333C002E24D6 /* FirstTemplateChooseTableViewCell.xib in Resources */,
 				1F2839F124F78F2900F99A9B /* FirstMyClassTableViewCell.xib in Resources */,
 				1F4B89E52511E36A00AE7482 /* SixthMyCircleCenterDetails1TableViewCell.xib in Resources */,
 				1F5941BB24F4DDDF000B4B2D /* FourthLearningCenterDetails2TableViewCell.xib in Resources */,
@@ -5286,14 +5589,18 @@
 				1F59408024F3520E000B4B2D /* ThirdPersonalCenterHomeTableViewCell.xib in Resources */,
 				1FC05963251302490032C111 /* SexViewController.xib in Resources */,
 				1F7B6B1825008E200041CC5F /* SearchCollectionViewCell.xib in Resources */,
+				1F02D83925A4331A002E24D6 /* TemplateChooseViewController.xib in Resources */,
 				1F0EF6D224F6302E007506E7 /* ThirdMyPointsTableViewCell.xib in Resources */,
 				1F0EF67C24F5EDC5007506E7 /* FirstMyCollectionTableViewCell.xib in Resources */,
 				1F2839F624F78F4400F99A9B /* SecondMyClassTableViewCell.xib in Resources */,
 				1F59413124F3AAE4000B4B2D /* FirstTheTestTableViewCell.xib in Resources */,
 				1F4A74162543DACC001C04AD /* SixLearningCenterDetails1TableViewCell.xib in Resources */,
+				1F02D84D25A469B8002E24D6 /* TeacherLectureHallListViewController.xib in Resources */,
 				1F5C70912520454600BF2C57 /* FivethMyCollectionTableViewCell.xib in Resources */,
+				1F552E0525A5AFC7002FECF8 /* LaoShiXiangQingViewController.xib in Resources */,
 				1F0EF68B24F5EE17007506E7 /* FourthMyCollectionTableViewCell.xib in Resources */,
 				1F0AFD012531687200C4A23C /* FirstTheProblemOfFeedbackTableViewCell.xib in Resources */,
+				1F02D85D25A46AD3002E24D6 /* FirstTeacherLectureHallListCollectionViewCell.xib in Resources */,
 				1F7B6B342500B5E10041CC5F /* ActivityCompletionViewController.xib in Resources */,
 				1F59413624F3AB02000B4B2D /* SecondTheTestTableViewCell.xib in Resources */,
 				1F5941D324F4E7A9000B4B2D /* FirstMyCircleCenterHomeTableViewCell.xib in Resources */,
@@ -5430,6 +5737,7 @@
 				1F283A0324F7A47B00F99A9B /* PublishTaskViewController.m in Sources */,
 				1F59410A24F39EB4000B4B2D /* FourthLaborCenterHomeTableViewCell.m in Sources */,
 				1F5941A624F4DBE9000B4B2D /* LearningCenterDetails2ViewController.m in Sources */,
+				1F552E0425A5AFC7002FECF8 /* LaoShiXiangQingViewController.m in Sources */,
 				1F88DC07253A9FFD003B428E /* PerfectYuanXiModel.m in Sources */,
 				1F759903251357220061BACD /* SLEditVideoController.m in Sources */,
 				1F0EF67624F5ED7E007506E7 /* MyCollectionViewController.m in Sources */,
@@ -5484,6 +5792,7 @@
 				1F2839D824F74B2700F99A9B /* SecondMyCircleCenterDetails2TableViewCell.m in Sources */,
 				1F59414C24F3B990000B4B2D /* FirstAssessmentOfTheTaskTableViewCell.m in Sources */,
 				1F2839F524F78F4400F99A9B /* SecondMyClassTableViewCell.m in Sources */,
+				1F43FEC3259C6706008E4504 /* TeacherIntroducedDteailsViewController.m in Sources */,
 				1F3C812C2524294800D5D5AE /* MyTaskAssessmentTeacher3ViewController.m in Sources */,
 				1F7A70BE25218B570040D126 /* SecondPersonalMyCircleTableViewCell.m in Sources */,
 				1F5940D824F38916000B4B2D /* SecondLearningCenterHomeTableViewCell.m in Sources */,
@@ -5514,6 +5823,7 @@
 				1F5941D424F4E7A9000B4B2D /* FirstMyCircleCenterHomeTableViewCell.m in Sources */,
 				1F147E35254AB26500DF09FD /* NoNetWorkView.m in Sources */,
 				1F4A41DD250A087400ADE536 /* FirstWrongChooseQuestionCollectionViewCell.m in Sources */,
+				1F31E3AA259579E100C24954 /* YsyPopAnimationManage.m in Sources */,
 				1F34CA152536C82300541B71 /* PublishTaskClassStudentModel.m in Sources */,
 				1F0AFD082531699F00C4A23C /* SecondTheProblemOfFeedbackTableViewCell.m in Sources */,
 				1F5940D324F388C2000B4B2D /* FirstLearningCenterHomeTableViewCell.m in Sources */,
@@ -5522,6 +5832,7 @@
 				1F59407D24F3520E000B4B2D /* SecondPersonalCenterHomeTableViewCell.m in Sources */,
 				1F54538E25033E7000C3F3A3 /* FirstFrameOfTheVideo.m in Sources */,
 				1F59425024F5194E000B4B2D /* FirstSettingUpTableViewCell.m in Sources */,
+				1F43FEDA259C82E8008E4504 /* TestClassificationViewController.m in Sources */,
 				1F59413E24F3B26A000B4B2D /* ExaminationResultsViewController.m in Sources */,
 				1F88DC20253D5D31003B428E /* ZeroJieGuoTableViewCell.m in Sources */,
 				1F59407C24F3520E000B4B2D /* FirstPersonalCenterHomeTableViewCell.m in Sources */,
@@ -5530,6 +5841,7 @@
 				1F4B89E92511F5C400AE7482 /* FiveMyCircleCenterHomeTableViewCell.m in Sources */,
 				1F593FD424F34FA7000B4B2D /* AppDelegate.m in Sources */,
 				1F88DC42253ED044003B428E /* LaborCenterLessonDetailsPlayEndView.m in Sources */,
+				1F02D84C25A469B8002E24D6 /* TeacherLectureHallListViewController.m in Sources */,
 				1F5940CE24F373B0000B4B2D /* LearningCenterHomeViewController.m in Sources */,
 				1F0269D625170BD100084DAB /* StudentIdViewController.m in Sources */,
 				1F59407B24F3520E000B4B2D /* PersonalCenterHomeViewController.m in Sources */,
@@ -5543,6 +5855,7 @@
 				1FFB4ABD24FC8643003C5FC8 /* LoginRequestDatas.m in Sources */,
 				1F759911251357220061BACD /* UIView+SLImage.m in Sources */,
 				1F59410024F39B2C000B4B2D /* SecondLaborCenterHomeTableViewCell.m in Sources */,
+				1F552DF925A59D50002FECF8 /* TeacherIntroducedDteailsModel.m in Sources */,
 				1F59412B24F3AAAC000B4B2D /* TheTestViewController.m in Sources */,
 				1F4B89D8251089C200AE7482 /* TaskAssessmentDetailsModel.m in Sources */,
 				1F88DC28253D6F5B003B428E /* ZeroJieGuoCollectionViewCell.m in Sources */,
@@ -5563,6 +5876,7 @@
 				1F7598F9251357220061BACD /* SLDelayPerform.m in Sources */,
 				1F4A41D7250A069C00ADE536 /* WrongChooseQuestionView.m in Sources */,
 				1F0269C72517099300084DAB /* MobnumberViewController.m in Sources */,
+				1F43FEB8259C160C008E4504 /* XBTextLoopView.m in Sources */,
 				1F59419324F4BE4B000B4B2D /* FirstLearningCenterDetails1TableViewCell.m in Sources */,
 				1F38A8812501DBB60032A748 /* SelPlayerConfiguration.m in Sources */,
 				1F59407E24F3520E000B4B2D /* ThirdPersonalCenterHomeTableViewCell.m in Sources */,
@@ -5580,6 +5894,7 @@
 				1F88DC15253AC256003B428E /* ZeropinlunTableViewCell.m in Sources */,
 				1F5F1E38251C93540074B550 /* FivethLearningCenterDetails1TableViewCell.m in Sources */,
 				1F0EF6A624F60A54007506E7 /* CommentOnHistoryViewController.m in Sources */,
+				1F43FEB7259C160C008E4504 /* EightLaborCenterHomeNewsTableViewCell.m in Sources */,
 				1F759906251357220061BACD /* SLEditTextView.m in Sources */,
 				1F54538A2503324000C3F3A3 /* LaborCenterRequestDatas.m in Sources */,
 				1F4A74152543DACC001C04AD /* SixLearningCenterDetails1TableViewCell.m in Sources */,
@@ -5590,6 +5905,7 @@
 				1FFB4A9D24F892B3003C5FC8 /* RegisterViewController.m in Sources */,
 				1F759902251357220061BACD /* SLImageClipController.m in Sources */,
 				1F5941D124F4E7A9000B4B2D /* SecondMyCircleCenterHomeTableViewCell.m in Sources */,
+				1F02D83825A4331A002E24D6 /* TemplateChooseViewController.m in Sources */,
 				1F0AFD302534572600C4A23C /* TeacherTimerViewController.m in Sources */,
 				1F59422424F50046000B4B2D /* NewCirclesTextAndVideoViewController.m in Sources */,
 				1F2B6F512575F3C5002ACB10 /* BasePFViewController.m in Sources */,
@@ -5640,6 +5956,7 @@
 				1F59424B24F51919000B4B2D /* SettingUpViewController.m in Sources */,
 				1F0EF6CC24F6301C007506E7 /* SecondMyPointsTableViewCell.m in Sources */,
 				1F759925251363130061BACD /* SecondNewCirclesTextAndVideoTableViewCell.m in Sources */,
+				1F43FECE259C7E34008E4504 /* FirstTeacherIntroducedDteailsTableViewCell.m in Sources */,
 				1F91687324FE51D000D3D7A4 /* ChooseQuestionView.m in Sources */,
 				1F59413024F3AAE4000B4B2D /* FirstTheTestTableViewCell.m in Sources */,
 				1F2B6ED42570A31E002ACB10 /* FivethLaborCenterHomeTableViewCell.m in Sources */,
@@ -5655,7 +5972,9 @@
 				1F34CA0E25369E2000541B71 /* FirstMyClassCollectionViewCell.m in Sources */,
 				1F4ECF9125231BDB00297AA3 /* SecondSubmitTaskTableViewCell.m in Sources */,
 				1F75990C251357220061BACD /* SLPaddingLabel.m in Sources */,
+				1F02D82C25A2E8FD002E24D6 /* SecondTeacherIntroducedDteailsTableViewCell.m in Sources */,
 				1F026A88251C76DD00084DAB /* LaborLunBoModel.m in Sources */,
+				1F02D86C25A56A72002E24D6 /* TeacherLectureHallListSModel.m in Sources */,
 				1F59414724F3B77A000B4B2D /* AssessmentOfTheTaskViewController.m in Sources */,
 				1F2839EB24F78E1F00F99A9B /* MyClassViewController.m in Sources */,
 				1F5F1E3F251D85AE0074B550 /* SectionHeaderMyCircleCenterHomeView.m in Sources */,
@@ -5672,6 +5991,7 @@
 				1F0EF68524F5EE03007506E7 /* ThirdMyCollectionTableViewCell.m in Sources */,
 				1F59423824F512B1000B4B2D /* PersonalinformationViewController.m in Sources */,
 				1F759904251357220061BACD /* SLEditImageController.m in Sources */,
+				1F552E0C25A5AFEE002FECF8 /* FirstLaoShiXiangQingTableViewCell.m in Sources */,
 				1F7598FD251357220061BACD /* SLAvWriterInput.m in Sources */,
 				1F4A41F8250F4FCE00ADE536 /* MyFileRequestDatas.m in Sources */,
 				1F0269E2251711BC00084DAB /* UserNameViewController.m in Sources */,
@@ -5680,6 +6000,7 @@
 				1F4ECFA825233A0C00297AA3 /* MyTaskAssessmentTeacherTableViewCell.m in Sources */,
 				1F7B6B0A250081740041CC5F /* UICollectionViewLeftAlignedLayout.m in Sources */,
 				1F34CA202536DEA400541B71 /* LaborCenterHomeSearchResultViewController.m in Sources */,
+				1F02D84025A4333C002E24D6 /* FirstTemplateChooseTableViewCell.m in Sources */,
 				1F38A8522500E81B0032A748 /* SecondStudentDetailsTableViewCell.m in Sources */,
 				1F0AFD58253583A300C4A23C /* SecondMyTaskAssessmentTeacherDetailsTableViewCell.m in Sources */,
 				1F026A70251B1AFA00084DAB /* RankListModel.m in Sources */,
@@ -5691,8 +6012,10 @@
 				1F4A41ED250B618C00ADE536 /* LearningCenterDetailsModel.m in Sources */,
 				1F38A87E2501DBB60032A748 /* SelPlaybackControls.m in Sources */,
 				1FF14D08250736F200CB5486 /* FivethLaborCenterLessonDetailsTableViewCell.m in Sources */,
+				1F02D85C25A46AD3002E24D6 /* FirstTeacherLectureHallListCollectionViewCell.m in Sources */,
 				1F0AFD172531B82E00C4A23C /* MyTaskAssessmentTeacher2Model.m in Sources */,
 				1F0EF68A24F5EE17007506E7 /* FourthMyCollectionTableViewCell.m in Sources */,
+				1F02D86625A46E5D002E24D6 /* TeacherLectureHallListModel.m in Sources */,
 				1F59424224F5143C000B4B2D /* SecondPersonalinformationTableViewCell.m in Sources */,
 				1F38A8352500DDD20032A748 /* ActivityCompletionDetailViewController.m in Sources */,
 				1F38A84D2500E8080032A748 /* FirstStudentDetailsTableViewCell.m in Sources */,
@@ -5725,6 +6048,7 @@
 				1F5941AB24F4DCE4000B4B2D /* FirstLearningCenterDetails2TableViewCell.m in Sources */,
 				1F38A8822501DBB60032A748 /* SelVideoSlider.m in Sources */,
 				1F0EF6DF24F640F8007506E7 /* RankListViewController.m in Sources */,
+				1F31E3A9259579E100C24954 /* YsyPopHelper.m in Sources */,
 				1F5940DD24F38940000B4B2D /* ThirdLearningCenterHomeTableViewCell.m in Sources */,
 				1F5940FB24F39AF2000B4B2D /* FirstLaborCenterHomeTableViewCell.m in Sources */,
 				1F4A41E5250B2A8200ADE536 /* LearningCenterHomeModel.m in Sources */,
@@ -5899,7 +6223,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 84843P32KG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5916,7 +6240,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wqy.labor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -5929,7 +6253,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 84843P32KG;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -5946,7 +6270,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.3;
+				MARKETING_VERSION = 1.0.4;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wqy.labor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

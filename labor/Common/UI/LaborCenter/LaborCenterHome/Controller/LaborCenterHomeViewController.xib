@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -63,7 +63,7 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oLI-hX-Q4C">
-                                    <rect key="frame" x="15" y="14.5" width="329" height="35"/>
+                                    <rect key="frame" x="65" y="14.5" width="279" height="35"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="搜课程,文章" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5H-Mh-Ht2">
                                             <rect key="frame" x="45" y="9" width="75.5" height="17"/>
@@ -80,7 +80,7 @@
                                             </constraints>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1I-2o-fcq">
-                                            <rect key="frame" x="0.0" y="0.0" width="329" height="35"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="279" height="35"/>
                                             <connections>
                                                 <action selector="seachButtonAction:" destination="-1" eventType="touchUpInside" id="xqu-Hs-Tyf"/>
                                             </connections>
@@ -151,17 +151,26 @@
                                         <constraint firstItem="LtS-tH-iEd" firstAttribute="top" secondItem="2jj-FA-3Ew" secondAttribute="top" constant="3" id="wql-WR-iab"/>
                                     </constraints>
                                 </view>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sylogo" translatesAutoresizingMaskIntoConstraints="NO" id="UbD-4L-Z8q">
+                                    <rect key="frame" x="15" y="17" width="30" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="30" id="d4J-Kd-UP5"/>
+                                        <constraint firstAttribute="height" constant="30" id="gGx-iu-UF4"/>
+                                    </constraints>
+                                </imageView>
                             </subviews>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
+                                <constraint firstItem="UbD-4L-Z8q" firstAttribute="leading" secondItem="YYD-uH-zYZ" secondAttribute="leading" constant="15" id="3fb-r3-UKr"/>
                                 <constraint firstItem="oLI-hX-Q4C" firstAttribute="centerY" secondItem="YYD-uH-zYZ" secondAttribute="centerY" id="3hs-wj-AnA"/>
                                 <constraint firstAttribute="height" constant="64" id="CMZ-P5-XzH"/>
-                                <constraint firstItem="oLI-hX-Q4C" firstAttribute="leading" secondItem="YYD-uH-zYZ" secondAttribute="leading" constant="15" id="DaG-Eg-0TV"/>
+                                <constraint firstItem="oLI-hX-Q4C" firstAttribute="leading" secondItem="YYD-uH-zYZ" secondAttribute="leading" constant="65" id="DaG-Eg-0TV"/>
                                 <constraint firstItem="dEm-Oc-Dk3" firstAttribute="centerY" secondItem="YYD-uH-zYZ" secondAttribute="centerY" id="F5V-tS-KYh"/>
                                 <constraint firstItem="2jj-FA-3Ew" firstAttribute="centerY" secondItem="YYD-uH-zYZ" secondAttribute="centerY" id="Fxt-89-Zz2"/>
                                 <constraint firstItem="dEm-Oc-Dk3" firstAttribute="leading" secondItem="YYD-uH-zYZ" secondAttribute="leading" constant="5" id="JAg-MD-Kdc"/>
                                 <constraint firstItem="2jj-FA-3Ew" firstAttribute="leading" secondItem="oLI-hX-Q4C" secondAttribute="trailing" constant="20" id="Jch-rF-HcB"/>
                                 <constraint firstAttribute="trailing" secondItem="2jj-FA-3Ew" secondAttribute="trailing" constant="15" id="ehN-D4-6oa"/>
+                                <constraint firstItem="UbD-4L-Z8q" firstAttribute="centerY" secondItem="YYD-uH-zYZ" secondAttribute="centerY" id="ffD-sW-UmJ"/>
                             </constraints>
                         </view>
                         <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="p7d-83-QDh">
@@ -201,6 +210,7 @@
         <image name="ic_message" width="24" height="24"/>
         <image name="ic_search" width="15" height="15"/>
         <image name="ic_searchjt" width="11" height="11"/>
+        <image name="sylogo" width="28.5" height="33"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
