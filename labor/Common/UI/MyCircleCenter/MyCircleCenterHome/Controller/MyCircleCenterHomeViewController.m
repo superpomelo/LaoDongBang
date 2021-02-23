@@ -95,6 +95,7 @@
         self.rottieView.hidden = NO;
 
         if (!_animatedView) {
+            
             LOTAnimationView *animatedView = [LOTAnimationView animationNamed:@"data" inBundle:[NSBundle mainBundle]];
             animatedView.loopAnimation = YES;
             animatedView.contentMode = UIViewContentModeScaleAspectFill;

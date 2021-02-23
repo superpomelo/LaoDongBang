@@ -301,6 +301,8 @@
 		1F552E0525A5AFC7002FECF8 /* LaoShiXiangQingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F552E0325A5AFC7002FECF8 /* LaoShiXiangQingViewController.xib */; };
 		1F552E0C25A5AFEE002FECF8 /* FirstLaoShiXiangQingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F552E0A25A5AFEE002FECF8 /* FirstLaoShiXiangQingTableViewCell.m */; };
 		1F552E0D25A5AFEE002FECF8 /* FirstLaoShiXiangQingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F552E0B25A5AFEE002FECF8 /* FirstLaoShiXiangQingTableViewCell.xib */; };
+		1F552E6625AD4356002FECF8 /* newdata.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F552E6525AD4356002FECF8 /* newdata.json */; };
+		1F552E6E25AD4762002FECF8 /* green_lottie_tab_mine.json in Resources */ = {isa = PBXBuildFile; fileRef = 1F552E6D25AD4762002FECF8 /* green_lottie_tab_mine.json */; };
 		1F593FD424F34FA7000B4B2D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F593FD324F34FA7000B4B2D /* AppDelegate.m */; };
 		1F593FDD24F34FA7000B4B2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F593FDB24F34FA7000B4B2D /* Main.storyboard */; };
 		1F593FDF24F34FAA000B4B2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F593FDE24F34FAA000B4B2D /* Assets.xcassets */; };
@@ -1064,6 +1066,8 @@
 		1F552E0925A5AFEE002FECF8 /* FirstLaoShiXiangQingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstLaoShiXiangQingTableViewCell.h; sourceTree = "<group>"; };
 		1F552E0A25A5AFEE002FECF8 /* FirstLaoShiXiangQingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstLaoShiXiangQingTableViewCell.m; sourceTree = "<group>"; };
 		1F552E0B25A5AFEE002FECF8 /* FirstLaoShiXiangQingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstLaoShiXiangQingTableViewCell.xib; sourceTree = "<group>"; };
+		1F552E6525AD4356002FECF8 /* newdata.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = newdata.json; sourceTree = "<group>"; };
+		1F552E6D25AD4762002FECF8 /* green_lottie_tab_mine.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = green_lottie_tab_mine.json; sourceTree = "<group>"; };
 		1F593FCF24F34FA7000B4B2D /* labor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = labor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F593FD224F34FA7000B4B2D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1F593FD324F34FA7000B4B2D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -2396,6 +2400,8 @@
 		1F2B6ECB25709D71002ACB10 /* LOTTIEJson */ = {
 			isa = PBXGroup;
 			children = (
+				1F552E6D25AD4762002FECF8 /* green_lottie_tab_mine.json */,
+				1F552E6525AD4356002FECF8 /* newdata.json */,
 				1F2B6ECC25709D94002ACB10 /* data.json */,
 			);
 			path = LOTTIEJson;
@@ -5510,6 +5516,7 @@
 				1F5941A724F4DBE9000B4B2D /* LearningCenterDetails2ViewController.xib in Resources */,
 				1F0EF6D724F6303E007506E7 /* FourthMyPointsTableViewCell.xib in Resources */,
 				1F7A70AF252182640040D126 /* PersonalMyCircleViewController.xib in Resources */,
+				1F552E6E25AD4762002FECF8 /* green_lottie_tab_mine.json in Resources */,
 				1F2839D424F74A9500F99A9B /* FirstMyCircleCenterDetails2TableViewCell.xib in Resources */,
 				1F5F1E44251D85BB0074B550 /* SectionHeaderMyCircleCenterHomeView.xib in Resources */,
 				1F7B6AF424FF8CE50041CC5F /* SecondWrongTestTableViewCell.xib in Resources */,
@@ -5645,6 +5652,7 @@
 				1F38A8492500E7E80032A748 /* StudentDetailsViewController.xib in Resources */,
 				1F7B6B13250082940041CC5F /* LaborCenterHomeSearchViewController.xib in Resources */,
 				1F4ECF9225231BDB00297AA3 /* SecondSubmitTaskTableViewCell.xib in Resources */,
+				1F552E6625AD4356002FECF8 /* newdata.json in Resources */,
 				1F38A83B2500E0290032A748 /* FirstActivityCompletionDetailTableViewCell.xib in Resources */,
 				1F026A5A25198AA200084DAB /* PlayVideoViewController.xib in Resources */,
 				1F59407F24F3520E000B4B2D /* FirstPersonalCenterHomeTableViewCell.xib in Resources */,

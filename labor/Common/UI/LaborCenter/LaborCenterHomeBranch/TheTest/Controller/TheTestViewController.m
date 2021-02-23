@@ -309,7 +309,12 @@
                     }
  
                     NSMutableString *strM = [[NSMutableString alloc]initWithString:userAnswerStr];
-                    [strM appendString:@","];
+                    if ([userAnswerStr isEqualToString:@" "]||[userAnswerStr isEqualToString:@""]||userAnswerStr == nil) {
+                    }else{
+                        [strM appendString:@","];
+
+                    }
+//                    [strM appendString:@","];
                     [strM appendString:self.selStr];
                     dictM[@"id"] = [NSString stringWithFormat:@"%d",TTmodel.idx];
                     dictM[@"userAnswer"] = strM;

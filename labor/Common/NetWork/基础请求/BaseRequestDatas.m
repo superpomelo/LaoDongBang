@@ -130,7 +130,7 @@
                 if ([dict[@"code"] intValue] == 401) {
                     [SwitchRootController goLoginController];
                 }else{
-                   
+
                 }
             }
             failure(error);
@@ -150,7 +150,7 @@
                 if ([dict[@"code"] intValue] == 401) {
                     [SwitchRootController goLoginController];
                 }else{
-                    
+
                 }
             }
             success(responseObject);
@@ -169,7 +169,7 @@
                 if ([dict[@"code"] intValue] == 401) {
                     [SwitchRootController goLoginController];
                 }else{
-                   
+
                 }
             }
             failure(error);
@@ -186,7 +186,7 @@
                 if ([dict[@"code"] intValue] == 401) {
                     [SwitchRootController goLoginController];
                 }else{
-                   
+
                 }
             }
             success(responseObject);
@@ -205,7 +205,7 @@
                 if ([dict[@"code"] intValue] == 401) {
                     [SwitchRootController goLoginController];
                 }else{
-                   
+
                 }
             }
             failure(error);

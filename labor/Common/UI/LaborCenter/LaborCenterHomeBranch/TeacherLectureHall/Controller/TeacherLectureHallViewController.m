@@ -83,8 +83,14 @@
 }
 
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
+    UICollectionReusableView *header = nil;
    if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
-    UICollectionReusableView *header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
+     
+      header = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"reusableView" forIndexPath:indexPath];
+       //此处header可能会产生复用，所以在使用之前将其子视图移除掉
+       for (UIView *vi in header.subviews) {
+           [vi removeFromSuperview];
+       }
     TeacherLectureHallModel *modelss = self.array[indexPath.section];
        UIView *vis = [[UIView alloc]initWithFrame:CGRectMake(15, 25, 3, 15)];
        vis.backgroundColor = [UIColor colorWithRed:80/255.0 green:219/255.0 blue:142/255.0 alpha:1.0];
@@ -107,21 +113,19 @@
 
     //更多
     UILabel *gdlabel = [[UILabel alloc]init];
-       gdlabel.frame = CGRectMake(0, 25, 30, 15);
-          
-       gdlabel.text = @"更多";
-       gdlabel.font = [UIFont systemFontOfSize:14];
- 
-       gdlabel.textColor = [UIColor colorWithRed:102/255.0 green:102/255.0 blue:102/255.0 alpha:1.0];
-       [visss addSubview:gdlabel];
+    gdlabel.frame = CGRectMake(0, 25, 30, 15);
+    gdlabel.text = @"更多";
+    gdlabel.font = [UIFont systemFontOfSize:14];
+    gdlabel.textColor = [UIColor colorWithRed:102/255.0 green:102/255.0 blue:102/255.0 alpha:1.0];
+    [visss addSubview:gdlabel];
        
-       UIImageView *img = [[UIImageView alloc]initWithFrame:CGRectMake(30, 26.5, 12, 12)];
-       img.image = [UIImage imageNamed:@"ic_go2"];
-       [visss addSubview:img];
-       UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 37, 55)];
-       btn.tag = 1000+indexPath.section;
-       [btn addTarget:self action:@selector(gengduoAction:) forControlEvents:UIControlEventTouchUpInside];
-       [visss addSubview:btn];
+    UIImageView *img = [[UIImageView alloc]initWithFrame:CGRectMake(30, 26.5, 12, 12)];
+    img.image = [UIImage imageNamed:@"ic_go2"];
+    [visss addSubview:img];
+    UIButton *btn = [[UIButton alloc]initWithFrame:CGRectMake(0, 0, 37, 55)];
+    btn.tag = 1000+indexPath.section;
+    [btn addTarget:self action:@selector(gengduoAction:) forControlEvents:UIControlEventTouchUpInside];
+    [visss addSubview:btn];
     return header;
 
    } else {
