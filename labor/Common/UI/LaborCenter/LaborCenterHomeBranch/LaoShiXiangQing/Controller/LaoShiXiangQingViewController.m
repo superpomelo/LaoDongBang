@@ -77,6 +77,10 @@
     return cell;
 
 }
+//MARK: - Button Action - 点击事件
+- (IBAction)backButtonAction:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 /*
 #pragma mark - Navigation
 
