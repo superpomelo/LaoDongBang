@@ -29,6 +29,7 @@
 + (void)TeacherLectureHallrequestDataWithparameters:(nullable  id)parameters success:(void (^)(id result))success failure:(void (^)(NSError *error))failure{
     //    NSString *path = [NSString stringWithFormat:@"%@/auth/oauth/token",Host];
 //        NSString *path = [NSString stringWithFormat:@"%@learn/mobileLearn/getCourseLessonList",Host];
+    NSLog(@"%@",[UserInfoManager getToken]);
     NSString *path = [NSString stringWithFormat:@"%@learn/lesson/pagefortea",Host];
     
     //    NSString *JsonStr = [JsonString convertToJsonData:parameters];

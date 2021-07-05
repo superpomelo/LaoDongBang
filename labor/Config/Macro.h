@@ -14,7 +14,8 @@
 //正式
 static NSString * const Host = @"http://111.74.0.243:9999/";
 
-static NSString * const VideoHost = @"http://47.111.139.74:8089/";
+//static NSString * const VideoHost = @"http://47.111.139.74:8089/";
+static NSString * const VideoHost = @"http://111.74.0.243:81/";
 
 
 
@@ -26,7 +27,7 @@ static NSString * const VideoHost = @"http://47.111.139.74:8089/";
 
 #define kGreenColor     [UIColor colorWithRed:0/255.0 green:187/255.0 blue:145/255.0 alpha:1]
 #define db8eColor     [UIColor colorWithRed:80/255.0 green:219/255.0 blue:142/255.0 alpha:1]
-#define AppPlaceholderLunboImage   [UIImage imageNamed:@"bg_sign"]
+#define AppPlaceholderLunboImage   [UIImage imageNamed:@"huise"]
 
 #define SCR_W     [UIScreen mainScreen].bounds.size.width
 #define SCR_H     [UIScreen mainScreen].bounds.size.height

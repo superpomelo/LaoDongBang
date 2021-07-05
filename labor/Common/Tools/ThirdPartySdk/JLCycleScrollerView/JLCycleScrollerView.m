@@ -180,7 +180,7 @@ static NSTimeInterval const animatedTime = 0.35;
 -(JLPageControl *)pageControl
 {
     if (!_pageControl && _pageControlNeed) {
-        JLPageControl* pageControl = [[JLPageControl alloc] init];
+        JLPageControl* pageControl = [[JLPageControl alloc] initWithFrame:CGRectMake(0, self.bounds.size.height-_pageControl_botton-10, self.bounds.size.width, 10)];
         pageControl.hidesForSinglePage = YES;
         pageControl.pageIndicatorTintColor = [UIColor colorWithRed:255/255.0 green:255/255.0 blue:255/255.0 alpha:0.3];
         pageControl.currentPageIndicatorTintColor = [UIColor whiteColor];

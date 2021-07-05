@@ -41,6 +41,8 @@
 @property (nonatomic,strong)ChooseQuestionView *mychooseQuestionView;
 /**查看提示view*/
 @property (nonatomic,strong)TheTestTipsView *thetesttipView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
 @end
 
 @implementation TheTestViewController
@@ -60,9 +62,11 @@
     [self initUI];
     [self initmyTableView];
     if (self.from == ExaminationResultsMeiRi) {
+        self.titleLabel.text = @"每日一练";
         [self requestmobileEvaluationeverydaydo];
 
     }else{
+        self.titleLabel.text = @"考试冲关";
         [self requestmobileEvaluationgetExamDetails];
 
     }
@@ -99,6 +103,7 @@
     }
     return _thetesttipView;
 }
+
 - (void)initquestionsDtoListArrayM{
     for (int i=0; i<self.dataArray.count; i++) {
          //存入空答案
@@ -542,7 +547,7 @@
     [LaborCenterRequestDatas mobileEvaluationsubmitExamrequestDataWithparameters:para success:^(id  _Nonnull result) {
             ExaminationResultsViewController *ERvc = [[ExaminationResultsViewController alloc]init];
         ERvc.model = self.model;
-        ERvc.from = ExaminationResultsHome;
+        ERvc.from = self.from;
         [self.navigationController pushViewController:ERvc animated:YES];
     } failure:^(NSError * _Nonnull error) {
         
